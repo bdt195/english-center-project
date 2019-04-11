@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::namespace('Admin')->group(function () {
+    // Controllers Within The "App\Http\Controllers\Admin" Namespace
+    Route::prefix('admin')->group(function () {
+        Route::resource('category', 'CategoryController');
+        Route::resource('post', 'PostController');
+        Route::resource('student', 'StudentController');
+    });
+});
+
+Route::namespace('User')->group(function () {
+    // Controllers Within The "App\Http\Controllers\User" Namespace
+    Route::resource('category', 'CategoryController');
+    Route::resource('post', 'CategoryController');
+});

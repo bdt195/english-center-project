@@ -11,6 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        DB::table('category')->insert(
+            ['name' => 'Root Category']
+        );
+
+        DB::table('post_status')->insert([
+            ['title' => 'hide'],
+            ['title' => 'visible']
+        ]);
     }
 }
