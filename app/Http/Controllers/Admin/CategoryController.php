@@ -16,7 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categoryCollection = Category::all();
-        return view('admin.pages.index', ['categoryCollection' => $categoryCollection]);
+        return view('admin.pages.category.index', ['categoryCollection' => $categoryCollection]);
     }
 
     /**
@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.category.create');
     }
 
     /**

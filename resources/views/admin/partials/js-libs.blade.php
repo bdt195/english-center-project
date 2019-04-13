@@ -35,3 +35,6 @@
 <script src="/static/admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/static/admin/dist/js/demo.js"></script>
+
+@section('additional-script')
+@show
