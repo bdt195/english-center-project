@@ -26,7 +26,12 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.category.create');
+        $categoryCollection = Category::select("*")
+            ->whereNull('parent_id')
+            ->orWhere('parent_id', 1)
+            ->get();
+
+        return view('admin.pages.category.create', ['categoryCollection' => $categoryCollection]);
     }
 
     /**
@@ -37,25 +42,15 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $title = $request->input('title');
-        $parentId = $request->input('parent_id');
+        $name = $request->input('category-name');
+        $parentId = $request->input('parent-category-id');
 
         $category = new Category();
-        $category->title = $title;
+        $category->name = $name;
         $category->parent_id = $parentId;
         $category->save();
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $category = Category::findOrFail($id);
-        return view('welcome', ['category' => $category]);
+        return redirect()->action('Admin\CategoryController@index');
     }
 
     /**
@@ -66,7 +61,26 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        if($id == 1)
+            return redirect()->action('Admin\CategoryController@index');
+
+        $category = Category::findOrFail($id);
+
+        $categoryCollection = Category::select("*")
+            ->whereNull('parent_id')
+            ->orWhere([
+                ['parent_id', 1],
+                ['id', '<>', $category->id]
+            ])
+            ->get();
+
+        return view(
+            'admin.pages.category.edit',
+            [
+                'category' => $category,
+                'categoryCollection' => $categoryCollection
+            ]
+        );
     }
 
     /**
@@ -80,12 +94,14 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
 
-        $title = $request->input('title');
-        $parentId = $request->input('parent_id');
+        $name = $request->input('category-name');
+        $parentId = $request->input('parent-category-id');
 
-        $category->title = $title;
+        $category->name = $name;
         $category->parent_id = $parentId;
         $category->save();
+
+        return redirect()->action('Admin\CategoryController@index');
     }
 
     /**
@@ -98,5 +114,7 @@ class CategoryController extends Controller
     {
         $category = Category::findOrFail($id);
         $category->delete();
+
+        return redirect()->action('Admin\CategoryController@index');
     }
 }

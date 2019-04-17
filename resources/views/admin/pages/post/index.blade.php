@@ -30,12 +30,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            All Category
+            All Post
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li><a href="#">CMS</a></li>
-            <li class="active">Category</li>
+            <li class="active">Post</li>
         </ol>
     </section>
 
@@ -52,9 +52,11 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                             <tr>
-                                <th>Category ID</th>
-                                <th>Name</th>
-                                <th>Parent Category</th>
+                                <th>Id</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Category</th>
+                                <th>Status</th>
                                 <th>Created At</th>
                                 <th>Update At</th>
                                 <th>Edit</th>
@@ -62,21 +64,21 @@
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach ($categoryCollection as $category)
+                                @foreach ($postCollection as $post)
                                 <tr>
-                                    <td>{{ $category->id }}</td>
-                                    <td>{{ $category->name }}</td>
-                                    @if (!empty($category->parentCategory->name))
-                                    <td>{{ $category->parentCategory->name }}</td>
-                                    @else
-                                    <td></td>
+                                    <td>{{ $post->id }}</td>
+                                    <td>{{ $post->title }}</td>
+                                    <td>{{ $post->author }}</td>
+                                    <td>{{ $post->category->name }}</td>
+                                    @if ($post->status == 1))
+                                    <td><span class="label label-success">Enable</span></td>
+                                    @elseif($post->status == 0)
+                                    <td><span class="label label-danger">Disable</span></td>
                                     @endif
-                                    <td>{{ $category->created_at }}</td>
-                                    <td>{{ $category->updated_at }}</td>
-                                    @if($category->id != 1)
-                                    <td><a href="/admin/category/{{ $category->id }}/edit"><span class="label label-success">Edit</span></a></td>
+                                    <td>{{ $post->created_at }}</td>
+                                    <td>{{ $post->updated_at }}</td>
+                                    <td><a href="/admin/post/{{ $post->id }}/edit"><span class="label label-success">Edit</span></a></td>
                                     <td><a href=""><span class="label label-danger">Delete</span></a></td>
-                                    @endif
                                 </tr>
                                 @endforeach
                             </tbody>

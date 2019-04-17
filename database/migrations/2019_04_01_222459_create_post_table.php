@@ -20,16 +20,14 @@ class CreatePostTable extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('author');
-            $table->unsignedBigInteger('status')->default('1');
+            $table->smallInteger('status')->default('0');
+            $table->smallInteger('allow_comment')->default('1');
             $table->timestamps();
 
             $table->foreign('category_id')
                 ->references('id')->on('category')
                 ->onDelete('cascade');
 
-            $table->foreign('status')
-                ->references('id')->on('post_status')
-                ->onDelete('cascade');
         });
     }
 

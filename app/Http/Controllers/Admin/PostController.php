@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Post;
+use App\Category;
 
 class PostController extends Controller
 {
@@ -16,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
         $postCollection = Post::all();
-        return view('welcome', ['postCollection' => $postCollection]);
+        return view('admin.pages.post.index', ['postCollection' => $postCollection]);
     }
 
     /**
@@ -26,7 +27,11 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        $categoryCollection = Category::select("*")
+            ->whereNotNull('parent_id')
+            ->get();
+
+        return view('admin.pages.post.create', ['categoryCollection' => $categoryCollection]);
     }
 
     /**
@@ -50,18 +55,9 @@ class PostController extends Controller
         $post->author = $author;
         $post->status = $status;
         $post->save();
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $post = Post::findOrFail($id);
-        return view('welcome', ['post' => $post]);
+        return redirect()->action('Admin\PostController@index');
+
     }
 
     /**
@@ -72,7 +68,19 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        $categoryCollection = Category::select("*")
+            ->whereNotNull('parent_id')
+            ->get();
+
+        return view(
+            'admin.pages.post.edit',
+            [
+                'post' => $post,
+                'categoryCollection' => $categoryCollection
+            ]
+        );
     }
 
     /**
@@ -98,6 +106,8 @@ class PostController extends Controller
         $post->author = $author;
         $post->status = $status;
         $post->save();
+
+        return redirect()->action('Admin\PostController@index');
     }
 
     /**
@@ -110,5 +120,7 @@ class PostController extends Controller
     {
         $post = Post::findOrFail($id);
         $post->delete();
+
+        return redirect()->action('Admin\PostController@index');
     }
 }
