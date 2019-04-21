@@ -12,53 +12,53 @@
 */
 
 Route::get('/', function () {
-    return view('frontend/home/index');
+    return view('frontend/pages/home/index');
 });
 
 Route::get('/admission', function () {
-    return view('frontend/admission/index');
+    return view('frontend/pages/admission/index');
 });
 
 Route::get('/contact', function () {
-    return view('frontend/contact/index');
+    return view('frontend/pages/contact/index');
 });
 
 Route::get('/course', function () {
-    return view('frontend/course/index');
+    return view('frontend/pages/course/index');
 });
 
 Route::get('/course/list', function () {
-    return view('frontend/course/list');
+    return view('frontend/pages/course/list');
 });
 
 Route::get('/image-library', function () {
-    return view('frontend/image-library/index');
+    return view('frontend/pages/image-library/index');
 });
 
 Route::get('/image-library/detail', function () {
-    return view('frontend/image-library/detail');
+    return view('frontend/pages/image-library/detail');
 });
 
 Route::get('/introduction', function () {
-    return view('frontend/introduction/index');
+    return view('frontend/pages/introduction/index');
 });
 
 Route::get('/introduction/teacher', function () {
-    return view('frontend/introduction/teacher');
+    return view('frontend/pages/introduction/teacher');
 });
 
 Route::get('/new-activity-list', function () {
-    return view('frontend/new-activity-list/index');
+    return view('frontend/pages/new-activity-list/index');
 });
 
 Route::get('/new-activity-list/detail', function () {
-    return view('frontend/new-activity-list/detail');
+    return view('frontend/pages/new-activity-list/detail');
 });
 
 Route::get('/student', function () {
-    return view('frontend/student/index');
+    return view('frontend/pages/student/index');
 });
 
 Route::get('/student/detail', function () {
-    return view('frontend/student/detail');
+    return view('frontend/pages/student/detail');
 });
