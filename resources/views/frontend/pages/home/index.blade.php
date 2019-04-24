@@ -1,4 +1,4 @@
-@extends('frontend/layout-master/layout-default')
+@extends('frontend/layouts/default')
 @section('content')
 <div class="main-content-container">
   <div class="section__slider">
@@ -313,4 +313,7 @@
     </div>
   </div>
 </div>
+<!-- popup subscribe for student -->
+@include('frontend.includes.popup.subscribe')
 @endsection
+
