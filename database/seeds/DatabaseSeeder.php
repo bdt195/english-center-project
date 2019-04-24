@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -35,6 +36,27 @@ class DatabaseSeeder extends Seeder
         DB::table('post_status')->insert([
             ['title' => 'hide'],
             ['title' => 'visible']
+        ]);
+
+        DB::table('student')->insert([
+            [
+                'first_name' => 'Tho',
+                'last_name' => 'Bui',
+                'date_of_birth' => '1995-11-14',
+                'email' => 'buiductho195@gmail.com',
+                'phone_number' => '0966257823',
+                'address' => 'Hanoi',
+                'password' => 'unyv93n5b98v73b295ny3345834275n327v093579'
+            ]
+        ]);
+
+        DB::table('admins')->insert([
+            [
+                'first_name' => 'Tho',
+                'last_name' => 'Bui',
+                'email' => 'buiductho195@gmail.com',
+                'password' => Hash::make('admin@123'),
+            ]
         ]);
     }
 }

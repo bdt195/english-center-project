@@ -16,7 +16,8 @@ class CourseController extends Controller
     public function index()
     {
         $courseCollection = Course::all();
-        return view('welcome', ['courseCollection' => $courseCollection]);
+
+        return view('admin.pages.course.index', ['courseCollection' => $courseCollection]);
     }
 
     /**
@@ -26,7 +27,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.course.create');
     }
 
     /**

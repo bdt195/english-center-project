@@ -16,7 +16,7 @@ class TeacherController extends Controller
     public function index()
     {
         $teacherCollection = Teacher::all();
-        return view('welcome', ['teacherCollection' => $teacherCollection]);
+        return view('admin.pages.teacher.index', ['teacherCollection' => $teacherCollection]);
     }
 
     /**
@@ -26,7 +26,7 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pages.teacher.create');
     }
 
     /**
@@ -37,29 +37,19 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        $firstName = $request->input('firstname');
-        $lastName = $request->input('lastname');
+        $firstName = $request->input('first-name');
+        $lastName = $request->input('last-name');
         $email = $request->input('email');
         $phoneNumber = $request->input('phone-number');
 
         $teacher = new Teacher();
-        $teacher->firstname = $firstName;
-        $teacher->lastName = $lastName;
+        $teacher->first_name = $firstName;
+        $teacher->last_name = $lastName;
         $teacher->email = $email;
         $teacher->phone_number = $phoneNumber;
         $teacher->save();
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $teacher = Teacher::findOrFail($id);
-        return view('welcome', ['teacher' => $teacher]);
+        return redirect()->action('Admin\TeacherController@index');
     }
 
     /**
@@ -70,7 +60,9 @@ class TeacherController extends Controller
      */
     public function edit($id)
     {
-        //
+        $teacher = Teacher::findOrFail($id);
+
+        return view('admin.pages.teacher.edit', ['teacher' => $teacher]);
     }
 
     /**
@@ -95,6 +87,8 @@ class TeacherController extends Controller
         $teacher->email = $email;
         $teacher->phone_number = $phoneNumber;
         $teacher->save();
+
+        return redirect()->action('Admin\TeacherController@index');
     }
 
     /**
@@ -107,5 +101,7 @@ class TeacherController extends Controller
     {
         $teacher = Teacher::findOrFail($id);
         $teacher->delete();
+
+        return redirect()->action('Admin\PostController@index');
     }
 }

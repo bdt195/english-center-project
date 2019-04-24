@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\AdminAuth;
+namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -20,12 +21,14 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
+//    protected $guard = 'admin';
+
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = '/admin/index';
+    protected $redirectTo = '/admin/category';
 
     /**
      * Create a new controller instance.
@@ -34,6 +37,21 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+//        $this->middleware('auth.admin')->except('logout');
+    }
+
+    public function getLogin(){
+        return view('admin.pages.auth.login');
+    }
+
+    public function postLogin(Request $request)
+    {
+        if (auth()->guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
+//            return redirect()->action('Admin\PostController@index');
+            dd(auth()->guard('admin')->user());
+
+        }
+
+        return back()->withErrors(['email' => 'Email or password are wrong.']);
     }
 }

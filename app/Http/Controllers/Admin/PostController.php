@@ -57,7 +57,6 @@ class PostController extends Controller
         $post->save();
 
         return redirect()->action('Admin\PostController@index');
-
     }
 
     /**

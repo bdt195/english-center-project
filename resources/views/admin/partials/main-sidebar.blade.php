@@ -47,8 +47,20 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="index.html"><i class="fa fa-circle-o"></i> New Student</a></li>
-                    <li><a href="index2.html"><i class="fa fa-circle-o"></i> Student</a></li>
+                    <li><a href="/admin/student/create"><i class="fa fa-circle-o"></i> New Student</a></li>
+                    <li><a href="/admin/student"><i class="fa fa-circle-o"></i> Student</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Teacher</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/admin/teacher/create"><i class="fa fa-circle-o"></i> New Teacher</a></li>
+                    <li><a href="/admin/teacher"><i class="fa fa-circle-o"></i> Teacher</a></li>
                 </ul>
             </li>
             <li class="treeview">
@@ -59,10 +71,8 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="index.html"><i class="fa fa-circle-o"></i> New Teacher</a></li>
-                    <li><a href="index2.html"><i class="fa fa-circle-o"></i> Teacher</a></li>
-                    <li><a href="index.html"><i class="fa fa-circle-o"></i> New Course</a></li>
-                    <li><a href="index2.html"><i class="fa fa-circle-o"></i> Course</a></li>
+                    <li><a href="/admin/course/create"><i class="fa fa-circle-o"></i> New Course</a></li>
+                    <li><a href="/admin/course"><i class="fa fa-circle-o"></i> Course</a></li>
                 </ul>
             </li>
             <li class="treeview">

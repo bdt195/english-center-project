@@ -10,6 +10,8 @@ class Student extends Authenticatable
 {
     use Notifiable;
 
+    protected $table = 'student';
+
     /**
      * The attributes that are mass assignable.
      *
