@@ -18,13 +18,13 @@ Route::get('/', function () {
 Route::namespace('Admin')->group(function () {
     // Controllers Within The "App\Http\Controllers\Admin" Namespace
     Route::prefix('admin')->group(function () {
-        Route::resource('category', 'CategoryController');
-        Route::resource('post', 'PostController');
-        Route::resource('student', 'StudentController');
-        Route::resource('teacher', 'TeacherController');
-        Route::resource('course', 'CourseController');
+        Route::resource('category', 'CategoryController')->middleware('guest:admin');
+        Route::resource('post', 'PostController')->middleware('guest:admin');
+        Route::resource('student', 'StudentController')->middleware('guest:admin');
+        Route::resource('teacher', 'TeacherController')->middleware('guest:admin');
+        Route::resource('course', 'CourseController')->middleware('guest:admin');
 
-        Route::get('login','Auth\LoginController@getLogin');
+        Route::get('login','Auth\LoginController@getLogin')->name('admin.login');
         Route::post('login','Auth\LoginController@postLogin');
     });
 });

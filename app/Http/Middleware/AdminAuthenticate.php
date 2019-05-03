@@ -15,7 +15,7 @@ class AdminAuthenticate extends Middleware
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
-            return redirect()->action('Admin\PostController@index');
+            return route('admin.login');
         }
     }
 }

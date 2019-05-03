@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
             [
                 'first_name' => 'Tho',
                 'last_name' => 'Bui',
-                'email' => 'buiductho195@gmail.com',
+                'email' => 'admin@gmail.com',
                 'password' => Hash::make('admin@123'),
             ]
         ]);
