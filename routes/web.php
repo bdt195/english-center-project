@@ -64,9 +64,13 @@ Route::get('/student/detail', function () {
 });
 
 Route::get('/login', function () {
-    return view('frontend/login/index');
+    return view('frontend//pages/login/index');
 });
 
 Route::get('/register', function () {
-    return view('frontend/register/index');
+    return view('frontend/pages/register/index');
+});
+
+Route::get('/register-test', function () {
+    return view('frontend/pages/register-test/index');
 });

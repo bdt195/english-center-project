@@ -13,3 +13,4 @@
 <link rel="stylesheet" href="{{asset('frontend/css/font-icons.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/vendor.css')}}">
 <link rel="stylesheet" href="{{asset('frontend/css/main.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
