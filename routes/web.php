@@ -18,36 +18,17 @@ Route::get('/', function () {
 Route::namespace('Admin')->group(function () {
     // Controllers Within The "App\Http\Controllers\Admin" Namespace
     Route::prefix('admin')->group(function () {
-        Route::resource('category', 'CategoryController')->middleware('guest:admin');
-        Route::resource('post', 'PostController')->middleware('guest:admin');
-        Route::resource('student', 'StudentController')->middleware('guest:admin');
-        Route::resource('teacher', 'TeacherController')->middleware('guest:admin');
-        Route::resource('course', 'CourseController')->middleware('guest:admin');
+        Route::resource('category', 'CategoryController')->middleware('auth:admin');
+        Route::resource('post', 'PostController')->middleware('auth:admin');
+        Route::resource('student', 'StudentController')->middleware('auth:admin');
+        Route::resource('teacher', 'TeacherController')->middleware('auth:admin');
+        Route::resource('course', 'CourseController')->middleware('auth:admin');
 
+        Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
         Route::get('login','Auth\LoginController@getLogin')->name('admin.login');
         Route::post('login','Auth\LoginController@postLogin');
     });
 });
-
-//Route::group(['middleware'=>'auth.admin'], function() {
-//    Route::namespace('Admin')->group(function () {
-//        // Controllers Within The "App\Http\Controllers\Admin" Namespace
-//        Route::prefix('admin')->group(function () {
-//            Route::resource('category', 'CategoryController');
-//            Route::resource('post', 'PostController');
-//            Route::resource('student', 'StudentController');
-//            Route::resource('teacher', 'TeacherController');
-//        });
-//    });
-//});
-//
-//Route::namespace('Admin')->group(function () {
-//    // Controllers Within The "App\Http\Controllers\Admin" Namespace
-//    Route::prefix('admin')->group(function () {
-//        Route::get('login','Auth\LoginController@getLogin');
-//        Route::post('login','Auth\LoginController@postLogin');
-//    });
-//});
 
 Route::namespace('User')->group(function () {
     // Controllers Within The "App\Http\Controllers\User" Namespace
