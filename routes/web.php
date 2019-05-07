@@ -27,6 +27,7 @@ Route::namespace('Admin')->group(function () {
         Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
         Route::get('login','Auth\LoginController@getLogin')->name('admin.login');
         Route::post('login','Auth\LoginController@postLogin');
+        Route::post('logout','Auth\LoginController@logout')->name('admin.logout');
     });
 });
 
