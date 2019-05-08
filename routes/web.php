@@ -74,3 +74,11 @@ Route::get('/register', function () {
 Route::get('/register-test', function () {
     return view('frontend/pages/register-test/index');
 });
+
+Route::get('/recruitment', function () {
+    return view('frontend/pages/recruitment/index');
+});
+
+Route::get('/recruitment/description', function () {
+    return view('frontend/pages/recruitment/description');
+});

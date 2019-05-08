@@ -36,10 +36,11 @@
         <li class="menu__item"><a href="course-list.html">khóa học</a></li>
         <li class="menu__item"><a href="admissions.html">Tuyển sinh</a></li>
         <li class="menu__item"><a href="new-activity-list.html">Tin tức - Hoạt động</a></li>
-        <li class="menu__item"><a href="student.html">Học viên</a></li>
+        <!-- <li class="menu__item"><a href="student.html">Học viên</a></li> -->
         <li class="menu__item"><a href="#">Tuyển dụng</a></li>
         <li class="menu__item"><a href="contact.html">liên hệ</a></li>
-        <li class="menu__item"><a href="#">Đăng ký thi thử</a></li>
+        <li class="menu__item"><a href="#">Đăng nhập</a></li>
+        <li class="menu__item"><a href="#">Đăng ký</a></li>
       </ul>
       <div class="navbar-toggler-icon" data-control="aside"><i class="zmdi zmdi-menu"></i></div>
     </div>
