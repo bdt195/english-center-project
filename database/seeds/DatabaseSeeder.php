@@ -46,7 +46,22 @@ class DatabaseSeeder extends Seeder
                 'email' => 'buiductho195@gmail.com',
                 'phone_number' => '0966257823',
                 'address' => 'Hanoi',
-                'password' => 'unyv93n5b98v73b295ny3345834275n327v093579'
+                'password' => Hash::make('12345'),
+            ]
+        ]);
+
+        DB::table('teacher')->insert([
+            [
+                'first_name' => 'Le',
+                'last_name' => 'Minh',
+                'email' => 'abc@gmail.com',
+                'phone_number' => '123456789',
+            ],
+            [
+                'first_name' => 'Tran',
+                'last_name' => 'Anh',
+                'email' => 'abd@gmail.com',
+                'phone_number' => '123456789',
             ]
         ]);
 

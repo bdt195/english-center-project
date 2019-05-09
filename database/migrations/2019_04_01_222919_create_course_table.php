@@ -19,14 +19,11 @@ class CreateCourseTable extends Migration
             $table->string('name');
             $table->date('start_date');
             $table->string('schedule');
-            $table->float('price');
+            $table->string('teachers');
+            $table->integer('price');
             $table->text('description');
-            $table->unsignedBigInteger('teacher_id');
+            $table->smallInteger('status')->default(0);
             $table->timestamps();
-
-            $table->foreign('teacher_id')
-                ->references('id')->on('teacher')
-                ->onDelete('cascade');
         });
     }
 
