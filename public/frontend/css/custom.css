@@ -112,3 +112,20 @@ input {
 .avatar-user-inner-dropdown-menu a {
   color: #00457d !important;
 }
+
+.filter-list {
+  border: 1px solid #ccc;
+  background: rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.filter-list .title {
+  font-size: 18px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.filter-list a:hover {
+  text-decoration: none;
+}
