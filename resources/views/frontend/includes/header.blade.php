@@ -10,8 +10,13 @@
       </div>
       <div class="col-lg-3 col-md-4">
         <div class="login-logout-inner text-right">
-          <a href="#" class="mr-3">Đăng nhập</a>
-          <a href="#">Đăng ký</a>
+          @if(!$user)
+          <a href="/login" class="mr-3">Đăng nhập</a>
+          <a href="/register">Đăng ký</a>
+          @endif
+          @if($user)
+          <p class="mr-3">{{ $user->first_name . ' ' . $user->last_name }}</p>
+          @endif
         </div>
       </div>
     </div>
