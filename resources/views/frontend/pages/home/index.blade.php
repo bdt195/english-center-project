@@ -314,6 +314,6 @@
   </div>
 </div>
 <!-- popup subscribe for student -->
-@include('frontend.includes.popup.subscribe')
+<!-- @include('frontend.includes.popup.subscribe') -->
 @endsection
 
