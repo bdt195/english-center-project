@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <div class="footer__logo"><a href="/"><img src="{{asset('static/frontend/img/logo-white.png')}}" alt="Logo White"></a></div>
+      <div class="footer__logo"><a href="/"><img src="{{asset('/static/frontend/img/logo-white.png')}}" alt="Logo White"></a></div>
     </div>
     <div class="col-md-8">
       <div class="row pt-md-3">

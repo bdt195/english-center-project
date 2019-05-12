@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -48,10 +48,12 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $data['password_confirmation'] = $data['password-confirmation'];
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'first-name' => ['required', 'string', 'max:255'],
+            'last-name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:student'],
+            'password' => ['required', 'string', 'min:5', 'confirmed'],
         ]);
     }
 
@@ -64,9 +66,23 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return Student::create([
-            'name' => $data['name'],
+            'first_name' => $data['first-name'],
+            'last_name' => $data['last-name'],
             'email' => $data['email'],
+            'phone_number' => $data['phone'],
+            'address' => $data['address'],
+            'date_of_birth' => $data['date-of-birth'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showRegistrationForm()
+    {
+        return view('frontend.pages.register.index', ['user' => null]);
     }
 }

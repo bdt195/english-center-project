@@ -23,18 +23,18 @@
         </div>
         <div class="pt-3"></div>
         <div class="row">
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-1.jpg')}}" alt="" srcset=""/><span class="text-primary">Chỗ ăn ở, học tập</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-2.jpg')}}" alt="" srcset=""/><span class="text-primary">Học tập</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-3.jpg')}}" alt="" srcset=""/><span class="text-primary">Ngoại khóa</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-4.jpg')}}" alt="" srcset=""/><span class="text-primary">Thực tập</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-1.jpg')}}" alt="" srcset=""/><span class="text-primary">Chỗ ăn ở, học tập</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-2.jpg')}}" alt="" srcset=""/><span class="text-primary">Học tập</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-3.jpg')}}" alt="" srcset=""/><span class="text-primary">Ngoại khóa</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-4.jpg')}}" alt="" srcset=""/><span class="text-primary">Thực tập</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-1.jpg')}}" alt="" srcset=""/><span class="text-primary">Chỗ ăn ở, học tập</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-2.jpg')}}" alt="" srcset=""/><span class="text-primary">Học tập</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-3.jpg')}}" alt="" srcset=""/><span class="text-primary">Ngoại khóa</span></a></div>
-          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('static/frontend/img/images/img-4.jpg')}}" alt="" srcset=""/><span class="text-primary">Thực tập</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-1.jpg')}}" alt="" srcset=""/><span class="text-primary">Chỗ ăn ở, học tập</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-2.jpg')}}" alt="" srcset=""/><span class="text-primary">Học tập</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-3.jpg')}}" alt="" srcset=""/><span class="text-primary">Ngoại khóa</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-4.jpg')}}" alt="" srcset=""/><span class="text-primary">Thực tập</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-1.jpg')}}" alt="" srcset=""/><span class="text-primary">Chỗ ăn ở, học tập</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-2.jpg')}}" alt="" srcset=""/><span class="text-primary">Học tập</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-3.jpg')}}" alt="" srcset=""/><span class="text-primary">Ngoại khóa</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-4.jpg')}}" alt="" srcset=""/><span class="text-primary">Thực tập</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-1.jpg')}}" alt="" srcset=""/><span class="text-primary">Chỗ ăn ở, học tập</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-2.jpg')}}" alt="" srcset=""/><span class="text-primary">Học tập</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-3.jpg')}}" alt="" srcset=""/><span class="text-primary">Ngoại khóa</span></a></div>
+          <div class="col-md-4 col-lg-3"><a class="image-library__item" href="image-library-detail.html"><img src="{{asset('/static/frontend/img/images/img-4.jpg')}}" alt="" srcset=""/><span class="text-primary">Thực tập</span></a></div>
         </div>
         <div class="pt-2"></div>
         <div class="d-flex justify-content-center"><a class="btn btn-primary btn-loadmore" href="#">Xem thêm<i class="zmdi zmdi-chevron-down"></i></a></div>

@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
                 'first_name' => 'Tho',
                 'last_name' => 'Bui',
                 'date_of_birth' => '1995-11-14',
-                'email' => 'buiductho195@gmail.com',
+                'email' => 'demo@gmail.com',
                 'phone_number' => '0966257823',
                 'address' => 'Hanoi',
                 'password' => Hash::make('12345'),

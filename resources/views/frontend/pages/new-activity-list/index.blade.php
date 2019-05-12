@@ -21,7 +21,7 @@
       <div class="layout__masonry">
         <div class="left">
           <div class="card card-news card-news--3">
-            <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-1.jpg')}}"/></a></div>
+            <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-1.jpg')}}"/></a></div>
             <div class="card-body">
               <h5 class="card-title"><a href="#">CÙNG LE PLATEAU KHÁM PHÁ CÁC ĐỊA DANH TRÊN THẾ GIỚI TRONG ĐÊM CHUNG KẾT “ALL AROUND THE WORLD</a></h5>
               <p class="card-text">Tối ngày 28/8, Le Plateau đã có cơ hội được đồng hành với tư cách là nhà tài trợ Kim Cương cùng các bạn sinh viên của…</p>
@@ -31,7 +31,7 @@
         <div class="right">
           <div class="layout__masonry--item">
             <div class="card card-news card-news-right">
-              <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-3.jpg')}}"></a></div>
+              <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-3.jpg')}}"></a></div>
               <div class="card-body">
                 <h5 class="card-title"><a href="#">VÌ SAO CÁC BẬC PHỤ HUYNH TIN TƯỞNG LỰA CHỌN CHƯƠNG TRÌNH TIẾNG ANH DÀNH CHO THCS TẠI LE PLATEAU</a></h5>
                 <div class="text-icon-note"><i class="zmdi zmdi-time"></i><span>25/10/2018</span></div>
@@ -40,7 +40,7 @@
           </div>
           <div class="layout__masonry--item">
             <div class="card card-news card-news-left">
-              <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-2.jpg')}}"></a></div>
+              <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-2.jpg')}}"></a></div>
               <div class="card-body">
                 <h5 class="card-title"><a href="#">[BACK-TO-SCHOOL] VỮNG VÀNG TIẾNG ANH – CHÀO NĂM HỌC MỚI với Quỹ Học bổng Anh ngữ</a></h5>
                 <div class="text-icon-note"><i class="zmdi zmdi-time"></i><span>25/10/2018</span></div>
@@ -52,7 +52,7 @@
       <div class="row">
         <div class="col-md-4 col-lg-3">
           <div class="card card-news card-news--2">
-            <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-1.jpg')}}"/></a></div>
+            <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-1.jpg')}}"/></a></div>
             <div class="card-body">
               <h5 class="card-title"><a href="#">Trung tâm học tiếng Anh cho người đi làm ở đâu tốt?</a></h5>
               <p class="card-text">Nếu bạn là người đang đi làm, mong muốn cải thiện tiếng Anh để có</p>
@@ -62,7 +62,7 @@
         </div>
         <div class="col-md-4 col-lg-3">
           <div class="card card-news card-news--2">
-            <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-2.jpg')}}"/></a></div>
+            <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-2.jpg')}}"/></a></div>
             <div class="card-body">
               <h5 class="card-title"><a href="#">KINH NGHIỆM HỌC IELTS CHO NGƯỜI MỚI BẮT ĐẦU</a></h5>
               <p class="card-text">Nếu bạn là người đang đi làm, mong muốn cải thiện tiếng Anh để có</p>
@@ -72,7 +72,7 @@
         </div>
         <div class="col-md-4 col-lg-3">
           <div class="card card-news card-news--2">
-            <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-3.jpg')}}"/></a></div>
+            <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-3.jpg')}}"/></a></div>
             <div class="card-body">
               <h5 class="card-title"><a href="#">PHƯƠNG PHÁP HỌC TIẾNG ANH GIAO TIẾP HIỆU QUẢ</a></h5>
               <p class="card-text">Nếu bạn là người đang đi làm, mong muốn cải thiện tiếng Anh để có</p>
@@ -82,7 +82,7 @@
         </div>
         <div class="col-md-4 col-lg-3">
           <div class="card card-news card-news--2">
-            <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-2.jpg')}}"/></a></div>
+            <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-2.jpg')}}"/></a></div>
             <div class="card-body">
               <h5 class="card-title"><a href="#">MÁCH NHỎ BÍ QUYẾT LUYỆN THIIELTS CHO NGƯỜI MỚI BẮT ĐẦU</a></h5>
               <p class="card-text">Nếu bạn là người đang đi làm, mong muốn cải thiện tiếng Anh để có</p>
@@ -92,7 +92,7 @@
         </div>
         <div class="col-md-4 col-lg-3">
           <div class="card card-news card-news--2">
-            <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-1.jpg')}}"/></a></div>
+            <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-1.jpg')}}"/></a></div>
             <div class="card-body">
               <h5 class="card-title"><a href="#">Trung tâm học tiếng Anh cho người đi làm ở đâu tốt?</a></h5>
               <p class="card-text">Nếu bạn là người đang đi làm, mong muốn cải thiện tiếng Anh để có</p>
@@ -102,7 +102,7 @@
         </div>
         <div class="col-md-4 col-lg-3">
           <div class="card card-news card-news--2">
-            <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-3.jpg')}}"/></a></div>
+            <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-3.jpg')}}"/></a></div>
             <div class="card-body">
               <h5 class="card-title"><a href="#">MÁCH NHỎ BÍ QUYẾT LUYỆN THI IELTS CHO NGƯỜI MỚI BẮT ĐẦU</a></h5>
               <p class="card-text">Nếu bạn là người đang đi làm, mong muốn cải thiện tiếng Anh để có</p>
@@ -112,7 +112,7 @@
         </div>
         <div class="col-md-4 col-lg-3">
           <div class="card card-news card-news--2">
-            <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-1.jpg')}}"/></a></div>
+            <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-1.jpg')}}"/></a></div>
             <div class="card-body">
               <h5 class="card-title"><a href="#">Trung tâm học tiếng Anh cho người đi làm ở đâu tốt?</a></h5>
               <p class="card-text">Nếu bạn là người đang đi làm, mong muốn cải thiện tiếng Anh để có</p>
@@ -122,7 +122,7 @@
         </div>
         <div class="col-md-4 col-lg-3">
           <div class="card card-news card-news--2">
-            <div class="card-img"><a href="#"><img src="{{asset('static/frontend/img/news/news-3.jpg')}}"/></a></div>
+            <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-3.jpg')}}"/></a></div>
             <div class="card-body">
               <h5 class="card-title"><a href="#">PHƯƠNG PHÁP HỌC TIẾNG ANH GIAO TIẾP HIỆU QUẢ</a></h5>
               <p class="card-text">Nếu bạn là người đang đi làm, mong muốn cải thiện tiếng Anh để có</p>

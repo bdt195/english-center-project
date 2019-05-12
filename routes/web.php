@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.pages.home.index');
+Route::namespace('User')->group(function (){
+    Route::get('/', 'HomeController@index');
 });
 
 Route::namespace('Admin')->group(function () {
@@ -39,3 +39,7 @@ Route::namespace('User')->group(function () {
     Route::resource('category', 'CategoryController');
     Route::resource('post', 'CategoryController');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -21,55 +21,55 @@
           <div class="pt-4"></div>
           <div class="row">
             <div class="col-lg-4 col-md-6">
-              <div class="introduction-teacher"><a href="#"><img src="{{asset('static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
+              <div class="introduction-teacher"><a href="#"><img src="{{asset('/static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
                   <div class="introduction-teacher__content">
                     <h3>ANDREW <br/>RICHARDSON</h3><span>Teacher</span>
                   </div></a></div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="introduction-teacher"><a href="#"><img src="{{asset('static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
+              <div class="introduction-teacher"><a href="#"><img src="{{asset('/static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
                   <div class="introduction-teacher__content">
                     <h3>ANDREW <br/>RICHARDSON</h3><span>Teacher</span>
                   </div></a></div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="introduction-teacher"><a href="#"><img src="{{asset('static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
+              <div class="introduction-teacher"><a href="#"><img src="{{asset('/static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
                   <div class="introduction-teacher__content">
                     <h3>ANDREW <br/>RICHARDSON</h3><span>Teacher</span>
                   </div></a></div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="introduction-teacher"><a href="#"><img src="{{asset('static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
+              <div class="introduction-teacher"><a href="#"><img src="{{asset('/static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
                   <div class="introduction-teacher__content">
                     <h3>ANDREW <br/>RICHARDSON</h3><span>Teacher</span>
                   </div></a></div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="introduction-teacher"><a href="#"><img src="{{asset('static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
+              <div class="introduction-teacher"><a href="#"><img src="{{asset('/static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
                   <div class="introduction-teacher__content">
                     <h3>ANDREW <br/>RICHARDSON</h3><span>Teacher</span>
                   </div></a></div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="introduction-teacher"><a href="#"><img src="{{asset('static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
+              <div class="introduction-teacher"><a href="#"><img src="{{asset('/static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
                   <div class="introduction-teacher__content">
                     <h3>ANDREW <br/>RICHARDSON</h3><span>Teacher</span>
                   </div></a></div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="introduction-teacher"><a href="#"><img src="{{asset('static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
+              <div class="introduction-teacher"><a href="#"><img src="{{asset('/static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
                   <div class="introduction-teacher__content">
                     <h3>ANDREW <br/>RICHARDSON</h3><span>Teacher</span>
                   </div></a></div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="introduction-teacher"><a href="#"><img src="{{asset('static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
+              <div class="introduction-teacher"><a href="#"><img src="{{asset('/static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
                   <div class="introduction-teacher__content">
                     <h3>ANDREW <br/>RICHARDSON</h3><span>Teacher</span>
                   </div></a></div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="introduction-teacher"><a href="#"><img src="{{asset('static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
+              <div class="introduction-teacher"><a href="#"><img src="{{asset('/static/frontend/img/teacher/teacher-5.jpg')}}" alt="" srcset=""/>
                   <div class="introduction-teacher__content">
                     <h3>ANDREW <br/>RICHARDSON</h3><span>Teacher</span>
                   </div></a></div>

@@ -3,7 +3,7 @@
     <div class="advisory__banner">
       <div class="title"><span>Hotline </span><b>Tư vấn</b></div>
       <div class="content d-flex align-items-center justify-content-around justify-content-md-between">
-        <div class="icon"><img src="{{asset('static/frontend/img/phone-call-blue.png')}}" alt="Icon Phone"></div>
+        <div class="icon"><img src="{{asset('/static/frontend/img/phone-call-blue.png')}}" alt="Icon Phone"></div>
         <div class="phone-number">
           <div class="d-flex align-items-center flex-md-column flex-xl-row mb-2"><a href="tel:098888999"><b class="number mr-2">098 888 999</b></a><span class="employee">Măng đen</span></div>
           <div class="d-flex align-items-center flex-md-column flex-xl-row"><a href="tel:098888999"><b class="number mr-2">098 888 999</b></a><span class="employee">Măng đen</span></div>
@@ -44,17 +44,17 @@
     <h5 class="newpost-header">Bài viết mới nhất</h5>
     <div class="newpost-list">
       <div class="newpost-item">
-        <div class="img-wrap"><a href="#"><img src="{{asset('static/frontend/img/newpost/newpost-1.png')}}" alt="#"></a></div>
+        <div class="img-wrap"><a href="#"><img src="{{asset('/static/frontend/img/newpost/newpost-1.png')}}" alt="#"></a></div>
         <h6 class="title"> <a href="#">Le Plateau, sự lựa chọn hàng đầu cho bạn</a></h6>
         <div class="time">26 Tháng Mười, 2018</div>
       </div>
       <div class="newpost-item">
-        <div class="img-wrap"><a href="#"><img src="{{asset('static/frontend/img/newpost/newpost-2.png')}}" alt="#"></a></div>
+        <div class="img-wrap"><a href="#"><img src="{{asset('/static/frontend/img/newpost/newpost-2.png')}}" alt="#"></a></div>
         <h6 class="title"><a href="#">Những điều cần làm khi bắt đầu học tiếng Anh</a></h6>
         <div class="time">26 Tháng Mười, 2018</div>
       </div>
       <div class="newpost-item">
-        <div class="img-wrap"><a href="#"><img src="{{asset('static/frontend/img/newpost/newpost-3.png')}}" alt="#"></a></div>
+        <div class="img-wrap"><a href="#"><img src="{{asset('/static/frontend/img/newpost/newpost-3.png')}}" alt="#"></a></div>
         <h6 class="title"><a href="#">Những lợi ích tuyệt vời khi học tiếng Anh ở Le Plateau mà bạn nên biết</a></h6>
         <div class="time">26 Tháng Mười, 2018</div>
       </div>

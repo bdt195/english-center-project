@@ -24,10 +24,10 @@
         <div class="pt-3"></div>
         <div class="image-library--gallery">
           <div class="row">
-            <div class="col-md-6"><a href="./assets/img/images/img-1.jpg"><img src="{{asset('static/frontend/img/images/img-1.jpg')}}" alt=""></a></div>
-            <div class="col-md-6"><a href="./assets/img/images/img-2.jpg"><img src="{{asset('static/frontend/img/images/img-2.jpg')}}" alt=""></a></div>
-            <div class="col-md-6"><a href="./assets/img/images/img-3.jpg"><img src="{{asset('static/frontend/img/images/img-3.jpg')}}" alt=""></a></div>
-            <div class="col-md-6"><a href="./assets/img/images/img-4.jpg"><img src="{{asset('static/frontend/img/images/img-4.jpg')}}" alt=""></a></div>
+            <div class="col-md-6"><a href="./assets/img/images/img-1.jpg"><img src="{{asset('/static/frontend/img/images/img-1.jpg')}}" alt=""></a></div>
+            <div class="col-md-6"><a href="./assets/img/images/img-2.jpg"><img src="{{asset('/static/frontend/img/images/img-2.jpg')}}" alt=""></a></div>
+            <div class="col-md-6"><a href="./assets/img/images/img-3.jpg"><img src="{{asset('/static/frontend/img/images/img-3.jpg')}}" alt=""></a></div>
+            <div class="col-md-6"><a href="./assets/img/images/img-4.jpg"><img src="{{asset('/static/frontend/img/images/img-4.jpg')}}" alt=""></a></div>
           </div>
         </div>
         <div class="pt-4"></div>

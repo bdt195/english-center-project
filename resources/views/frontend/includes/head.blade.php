@@ -10,6 +10,7 @@
 <!-- google font-->
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Place favicon.ico in the root directory-->
-<link rel="stylesheet" href="{{asset('static/frontend/css/font-icons.css')}}">
-<link rel="stylesheet" href="{{asset('static/frontend/css/vendor.css')}}">
-<link rel="stylesheet" href="{{asset('static/frontend/css/main.css')}}">
+<link rel="stylesheet" href="{{asset('/static/frontend/css/font-icons.css')}}">
+<link rel="stylesheet" href="{{asset('/static/frontend/css/vendor.css')}}">
+<link rel="stylesheet" href="{{asset('/static/frontend/css/main.css')}}">
+<link rel="stylesheet" href="{{asset('/static/frontend/css/custom.css')}}">

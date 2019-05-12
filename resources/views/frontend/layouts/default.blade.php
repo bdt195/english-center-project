@@ -19,8 +19,8 @@
       @include('frontend.includes.footer')
     </footer>
 
-    <script src="{{asset('static/frontend/js/vendor.js')}}"></script>
-    <script src="{{asset('static/frontend/js/plugins.js')}}"></script>
-    <script src="{{asset('static/frontend/js/main.js')}}"></script>
+    <script src="{{asset('/static/frontend/js/vendor.js')}}"></script>
+    <script src="{{asset('/static/frontend/js/plugins.js')}}"></script>
+    <script src="{{asset('/static/frontend/js/main.js')}}"></script>
   </body>
 </html>

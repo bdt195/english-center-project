@@ -26,7 +26,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="course__item course__item--dark">
-            <div class="course__item--img"><img src="{{asset('static/frontend/img/course/course-1.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
+            <div class="course__item--img"><img src="{{asset('/static/frontend/img/course/course-1.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
             <div class="course__item--content">
               <h3 class="course__item--title"><a href="#">Khóa học tiếng Anh giao tiếp cơ bản</a></h3>
               <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
@@ -35,7 +35,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="course__item course__item--dark">
-            <div class="course__item--img"><img src="{{asset('static/frontend/img/course/course-3.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
+            <div class="course__item--img"><img src="{{asset('/static/frontend/img/course/course-3.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
             <div class="course__item--content">
               <h3 class="course__item--title"><a href="#">Khóa học luyện thi ielts</a></h3>
               <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
@@ -44,7 +44,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="course__item course__item--dark">
-            <div class="course__item--img"><img src="{{asset('static/frontend/img/course/course-2.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
+            <div class="course__item--img"><img src="{{asset('/static/frontend/img/course/course-2.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
             <div class="course__item--content">
               <h3 class="course__item--title"><a href="#">Khóa học tài chính</a></h3>
               <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>

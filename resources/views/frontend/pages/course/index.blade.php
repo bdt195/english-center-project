@@ -279,14 +279,8 @@
           </div>
           <div class="col-md-4 col-lg-3">
             <div class="nav-course-list"><a href="#">Khóa học đào tạo tiếng anh sơ cấp</a><a href="#">Khóa học ĐÀO TẠO TIẾNG ANH PRE-IELTS</a><a href="#">Khóa học LUYỆN THI TIẾNG ANH IELTS</a><a href="#">Khóa học TÀI CHÍNH</a></div>
-            <!-- include nav-right -->
-            @include('frontend.includes.nav-right')
           </div>
         </div>
-      </div>
-      <div class="section__form-get-route bg-grey">
-        <!-- include form-get-route -->
-        @include('frontend.includes.form-get-route')
       </div>
     </div>
   </div>

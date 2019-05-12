@@ -24,35 +24,35 @@
           </div>
           <div class="student__list">
             <div class="student__list-item">
-              <div class="student__list--img"><a href="#"><img src="{{asset('static/frontend/img/news/news-1.jpg')}}" alt="" srcset=""/></a></div>
+              <div class="student__list--img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-1.jpg')}}" alt="" srcset=""/></a></div>
               <div class="student__list--content">
                 <h3 class="text-primary font-weight-bold">Nguyễn Hạnh Hà My</h3><a class="text-primary student__list--title" href="#">Em rất thích môi trường học thế này</a>
                 <p>Giáo trình thực tế, thường xuyên có các bài tập tình huống, làm theo nhóm để các thành viên trong lớp trao đổi ý kiến và hỗ trợ nhau. Giảng viên có kiến thức thực tế, chuyên môn cao và chia sẻ cho học viên... </p><a class="btn" href="#">Xem thêm</a>
               </div>
             </div>
             <div class="student__list-item">
-              <div class="student__list--img"><a href="#"><img src="{{asset('static/frontend/img/news/news-2.jpg')}}" alt="" srcset=""/></a></div>
+              <div class="student__list--img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-2.jpg')}}" alt="" srcset=""/></a></div>
               <div class="student__list--content">
                 <h3 class="text-primary font-weight-bold">Hà Lê Việt Dũng</h3><a class="text-primary student__list--title" href="#">Thoát khỏi sự rụt rè trong giao tiếp bằng tiếng Anh</a>
                 <p>Giáo trình thực tế, thường xuyên có các bài tập tình huống, làm theo nhóm để các thành viên trong lớp trao đổi ý kiến và hỗ trợ nhau. Giảng viên có kiến thức thực tế, chuyên môn cao và chia sẻ cho học viên... </p><a class="btn" href="#">Xem thêm</a>
               </div>
             </div>
             <div class="student__list-item">
-              <div class="student__list--img"><a href="#"><img src="{{asset('static/frontend/img/news/news-3.jpg')}}" alt="" srcset=""/></a></div>
+              <div class="student__list--img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-3.jpg')}}" alt="" srcset=""/></a></div>
               <div class="student__list--content">
                 <h3 class="text-primary font-weight-bold">Nguyễn Hạnh Hà My</h3><a class="text-primary student__list--title" href="#">Em rất thích môi trường học thế này</a>
                 <p>Giáo trình thực tế, thường xuyên có các bài tập tình huống, làm theo nhóm để các thành viên trong lớp trao đổi ý kiến và hỗ trợ nhau. Giảng viên có kiến thức thực tế, chuyên môn cao và chia sẻ cho học viên... </p><a class="btn" href="#">Xem thêm</a>
               </div>
             </div>
             <div class="student__list-item">
-              <div class="student__list--img"><a href="#"><img src="{{asset('static/frontend/img/news/news-2.jpg')}}" alt="" srcset=""/></a></div>
+              <div class="student__list--img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-2.jpg')}}" alt="" srcset=""/></a></div>
               <div class="student__list--content">
                 <h3 class="text-primary font-weight-bold">Hà Lê Việt Dũng</h3><a class="text-primary student__list--title" href="#">Thoát khỏi sự rụt rè trong giao tiếp bằng tiếng Anh</a>
                 <p>Giáo trình thực tế, thường xuyên có các bài tập tình huống, làm theo nhóm để các thành viên trong lớp trao đổi ý kiến và hỗ trợ nhau. Giảng viên có kiến thức thực tế, chuyên môn cao và chia sẻ cho học viên... </p><a class="btn" href="#">Xem thêm</a>
               </div>
             </div>
             <div class="student__list-item">
-              <div class="student__list--img"><a href="#"><img src="{{asset('static/frontend/img/news/news-1.jpg')}}" alt="" srcset=""/></a></div>
+              <div class="student__list--img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-1.jpg')}}" alt="" srcset=""/></a></div>
               <div class="student__list--content">
                 <h3 class="text-primary font-weight-bold">Nguyễn Hạnh Hà My</h3><a class="text-primary student__list--title" href="#">Em rất thích môi trường học thế này</a>
                 <p>Giáo trình thực tế, thường xuyên có các bài tập tình huống, làm theo nhóm để các thành viên trong lớp trao đổi ý kiến và hỗ trợ nhau. Giảng viên có kiến thức thực tế, chuyên môn cao và chia sẻ cho học viên... </p><a class="btn" href="#">Xem thêm</a>
@@ -79,16 +79,16 @@
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="student__video-item"><a class="popup-video" href="https://www.youtube.com/watch?v=23PmRrFolMw" title=""><img src="{{asset('static/frontend/img/news/news-1.jpg')}}" alt=""></a></div>
+                <div class="student__video-item"><a class="popup-video" href="https://www.youtube.com/watch?v=23PmRrFolMw" title=""><img src="{{asset('/static/frontend/img/news/news-1.jpg')}}" alt=""></a></div>
               </div>
               <div class="swiper-slide"> 
-                <div class="student__video-item"><a class="popup-video" href="https://www.youtube.com/watch?v=_6GKQmL109g" title=""><img src="{{asset('static/frontend/img/news/news-2.jpg')}}" alt=""></a></div>
+                <div class="student__video-item"><a class="popup-video" href="https://www.youtube.com/watch?v=_6GKQmL109g" title=""><img src="{{asset('/static/frontend/img/news/news-2.jpg')}}" alt=""></a></div>
               </div>
               <div class="swiper-slide"> 
-                <div class="student__video-item"><a class="popup-video" href="https://www.youtube.com/watch?v=23PmRrFolMw" title=""><img src="{{asset('static/frontend/img/news/news-3.jpg')}}" alt=""></a></div>
+                <div class="student__video-item"><a class="popup-video" href="https://www.youtube.com/watch?v=23PmRrFolMw" title=""><img src="{{asset('/static/frontend/img/news/news-3.jpg')}}" alt=""></a></div>
               </div>
               <div class="swiper-slide"> 
-                <div class="student__video-item"><a class="popup-video" href="https://www.youtube.com/watch?v=23PmRrFolMw" title=""><img src="{{asset('static/frontend/img/news/news-1.jpg')}}" alt=""></a></div>
+                <div class="student__video-item"><a class="popup-video" href="https://www.youtube.com/watch?v=23PmRrFolMw" title=""><img src="{{asset('/static/frontend/img/news/news-1.jpg')}}" alt=""></a></div>
               </div>
             </div>
           </div>
