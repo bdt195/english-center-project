@@ -10,8 +10,21 @@
       </div>
       <div class="col-lg-3 col-md-4">
         <div class="login-logout-inner text-right">
-          <a href="#" class="mr-3">Đăng nhập</a>
-          <a href="#">Đăng ký</a>
+          <div class="d-block">
+            <a href="#" class="mr-3">Đăng nhập</a>
+            <a href="#">Đăng ký</a>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle avatar-user-inner" type="button" id="avatar-user-inner-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="avatar-user">
+                <img src="{{asset('frontend/img/profile.png')}}" alt="">
+              </div>  
+            </button>
+            <div class="dropdown-menu avatar-user-inner-dropdown-menu" aria-labelledby="avatar-user-inner-dropdown">
+              <a class="dropdown-item" href="#">Thông tin cá nhân</a>
+              <a class="dropdown-item" href="#">Đăng xuất</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

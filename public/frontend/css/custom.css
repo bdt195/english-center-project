@@ -88,3 +88,23 @@
 input {
   border-radius: 4px !important;
 }
+
+.avatar-user-inner {
+  position: relative;
+  padding-right: 20px;
+}
+
+.avatar-user-inner::after {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+}
+
+.avatar-user {
+  width: 20px;
+  height: 20px;
+}
+
+.avatar-user-inner-dropdown-menu a {
+  color: #00457d !important;
+}
