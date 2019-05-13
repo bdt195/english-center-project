@@ -15,7 +15,7 @@
         <div class="col-9">
           <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-              <div class="border rounded p-3 ">
+              <div class="border rounded p-3 bg-light">
                 <p><i class="zmdi zmdi-info text-dark mr-2"></i>Nguyen Van A</p>
                 <p><i class="zmdi zmdi-email text-dark mr-2"></i>nguyenvana@gmail.com</p>
                 <p><i class="zmdi zmdi-calendar-note text-dark mr-2"></i>01/01/1996</p>
@@ -24,7 +24,7 @@
               </div>
             </div>
             <div class="tab-pane fade" id="v-pills-edit-profile" role="tabpanel" aria-labelledby="v-pills-edit-profile-tab">
-              <div class="border rounded p-3 ">
+              <div class="border rounded p-3 bg-light">
                 <form action="">
                   <div class="form-group row">
                     <label for="staticFirstName" class="col-sm-3 col-form-label font-weight-bold"><i class="zmdi zmdi-info text-dark mr-2"></i>Tên họ</label>
@@ -67,15 +67,42 @@
               </div>
             </div>
             <div class="tab-pane fade" id="v-pills-course" role="tabpanel" aria-labelledby="v-pills-course-tab">
-              <div class="border rounded p-3 ">
-                <p>Khoa hoc 1</p>
-                <p>Khoa hoc 1</p>
-                <p>Khoa hoc 1</p>
-                <p>Khoa hoc 1</p>
+              <div class="border rounded p-3 bg-light">
+                <div class="list-course-registed">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="course__item border rounded">
+                        <div class="course__item--img"><img src="{{asset('frontend/img/course/course-1.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
+                        <div class="course__item--content">
+                          <h3 class="course__item--title"><a href="#">Khóa học tiếng Anh giao tiếp cơ bản</a></h3>
+                          <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="course__item border rounded">
+                        <div class="course__item--img"><img src="{{asset('frontend/img/course/course-1.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
+                        <div class="course__item--content">
+                          <h3 class="course__item--title"><a href="#">Khóa học tiếng Anh giao tiếp cơ bản</a></h3>
+                          <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="course__item border rounded">
+                        <div class="course__item--img"><img src="{{asset('frontend/img/course/course-1.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
+                        <div class="course__item--content">
+                          <h3 class="course__item--title"><a href="#">Khóa học tiếng Anh giao tiếp cơ bản</a></h3>
+                          <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="tab-pane fade" id="v-pills-change-password" role="tabpanel" aria-labelledby="v-pills-change-password-tab">
-              <div class="border rounded p-3 ">
+              <div class="border rounded p-3 bg-light">
                 <form action="">
                   <div class="form-group">
                     <label for="staticOldPassword" class="font-weight-bold"><i class="zmdi zmdi-shield-security text-dark mr-2"></i>Mật khẩu cũ</label>
