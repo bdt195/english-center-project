@@ -82,3 +82,7 @@ Route::get('/recruitment', function () {
 Route::get('/recruitment/description', function () {
     return view('frontend/pages/recruitment/description');
 });
+
+Route::get('/user', function () {
+    return view('frontend/pages/user/profile');
+});
