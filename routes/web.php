@@ -10,9 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', 'HomeController@index');
+Route::get('/recruitment', 'HomeController@recruitment');
+Route::get('/recruitment/{id}', 'HomeController@viewRecruitment');
+Route::post('/recruitment/{id}', 'HomeController@postCV');
 
 Route::namespace('User')->group(function (){
-    Route::get('/', 'HomeController@index');
+    Route::prefix('user')->group(function () {
+        Route::get('/profile', 'UserController@profile');
+    });
 });
 
 Route::namespace('Admin')->group(function () {
@@ -23,6 +29,7 @@ Route::namespace('Admin')->group(function () {
         Route::resource('student', 'StudentController')->middleware('auth:admin');
         Route::resource('teacher', 'TeacherController')->middleware('auth:admin');
         Route::resource('course', 'CourseController')->middleware('auth:admin');
+        Route::resource('recruitment', 'RecruitmentController')->middleware('auth:admin');
 
         Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
         Route::get('/', function(){
@@ -34,12 +41,4 @@ Route::namespace('Admin')->group(function () {
     });
 });
 
-Route::namespace('User')->group(function () {
-    // Controllers Within The "App\Http\Controllers\User" Namespace
-    Route::resource('category', 'CategoryController');
-    Route::resource('post', 'CategoryController');
-});
-
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

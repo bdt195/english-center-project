@@ -26,14 +26,11 @@
       </form>
     </div>
     <div class="list-job my-3">
-      @for ($i = 0; $i < 10; $i++)
+      @foreach ($recruitmentCollection as $item)
         <div class="job-cpn">
           <div class="row">
             <div class="col-md-9">
-              <a href="#" class="job-name"><h3>Giáo viên tiếng Anh</h3></a>
-              <div class="job-description text-2-line">
-                <p>- Tham gia giảng dạy các khóa học cho trung tâm. Trợ giảng các lớp Tiếng Anh trung cấp, sơ cấp. Chịu trách nhiệm về chất lượng đầu ra của các học viên Tham gia giảng dạy các khóa học cho trung tâm. Trợ giảng các lớp Tiếng Anh trung cấp, sơ cấp. Chịu trách nhiệm về chất lượng đầu ra của các học viên</p>
-              </div>
+              <a href="/recruitment/{{ $item->id }}" class="job-name"><h3>{{ $item->title }}</h3></a>
               <div class="time-ago mt-3">
                 <i class="zmdi zmdi-time-restore mr-1"></i>
                 <span class="font-italic">5 ngày trước</span>
@@ -44,7 +41,7 @@
             </div>
           </div>
         </div>
-      @endfor
+      @endforeach
     </div>
   </div>
 </div>

@@ -87,6 +87,18 @@
                     <li><a href="index2.html"><i class="fa fa-circle-o"></i> Test List</a></li>
                 </ul>
             </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Recruitment</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/admin/recruitment/create"><i class="fa fa-circle-o"></i> New Recruitment</a></li>
+                    <li><a href="/admin/recruitment"><i class="fa fa-circle-o"></i> All Recruitment</a></li>
+                </ul>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->

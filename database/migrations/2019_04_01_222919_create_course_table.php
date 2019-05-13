@@ -22,7 +22,9 @@ class CreateCourseTable extends Migration
             $table->string('teachers');
             $table->integer('price');
             $table->text('description');
+            $table->string('avatar');
             $table->smallInteger('status')->default(0);
+            $table->smallInteger('show_on_slider')->default(0);
             $table->timestamps();
         });
     }

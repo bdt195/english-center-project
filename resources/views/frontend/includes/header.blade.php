@@ -1,3 +1,9 @@
+<?php
+  $user = null;
+  if(isset($authUser)){
+    $user = $authUser;
+  }
+?>
 <div class="header__top">
   <div class="container">
     <div class="row align-items-center">
@@ -15,7 +21,29 @@
           <a href="/register">Đăng ký</a>
           @endif
           @if($user)
-          <p class="mr-3">{{ $user->first_name . ' ' . $user->last_name }}</p>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle avatar-user-inner" type="button" id="avatar-user-inner-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="avatar-user">
+                @if($user->avatar)
+                <img src="{{ $user->avatar }}" alt="" class="mr-2">
+                @else
+                <img src="{{asset('/static/frontend/img/profile.png')}}" alt="" class="mr-2">
+                @endif
+                <span>{{ $user->first_name . ' ' . $user->last_name }}</span>
+              </div>
+            </button>
+            <div class="dropdown-menu avatar-user-inner-dropdown-menu" aria-labelledby="avatar-user-inner-dropdown">
+              <a class="dropdown-item" href="/user/profile">Thông tin cá nhân</a>
+              <a class="dropdown-item" href="{{ route('logout') }}"
+                 onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                Đăng xuất
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
+            </div>
+          </div>
           @endif
         </div>
       </div>
@@ -40,7 +68,7 @@
         <li class="menu__item"><a href="admissions.html">Tuyển sinh</a></li>
         <li class="menu__item"><a href="new-activity-list.html">Tin tức - Hoạt động</a></li>
         <li class="menu__item"><a href="student.html">Học viên</a></li>
-        <li class="menu__item"><a href="#">Tuyển dụng</a></li>
+        <li class="menu__item"><a href="/recruitment">Tuyển dụng</a></li>
         <li class="menu__item"><a href="contact.html">Liên hệ</a></li>
       </ul>
       <div class="navbar-toggler-icon" data-control="aside"><i class="zmdi zmdi-menu"></i></div>
