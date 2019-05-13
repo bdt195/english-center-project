@@ -30,12 +30,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            All Course
+            Danh sách cơ sở
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Course</a></li>
-            <li class="active">Course</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+            <li><a href="#">Cơ sở</a></li>
+            <li class="active">Danh sách cơ sở</li>
         </ol>
     </section>
 
@@ -53,32 +53,26 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Course Code</th>
                                 <th>Name</th>
-                                <th>Start Date</th>
-                                <th>Schedule</th>
-                                <th>Price</th>
-                                <th>Teacher</th>
-                                <th>Status</th>
-                                <th>Show In Slider</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Số điện thoại</th>
+                                <th>Địa chỉ</th>
+                                <th>Ngày tạo</th>
+                                <th>Ngày cập nhật</th>
+                                <th>Sửa</th>
+                                <th>Xóa</th>
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach ($courseCollection as $course)
+                                @foreach ($facilityCollection as $facility)
                                 <tr>
-                                    <td>{{ $course->id }}</td>
-                                    <td>{{ $course->code }}</td>
-                                    <td>{{ $course->name }}</td>
-                                    <td>{{ $course->start_date }}</td>
-                                    <td>{{ $course->schedule }}</td>
-                                    <td>{{ $course->price }}</td>
-                                    <td>{{ $course->teachers }}</td>
-                                    <td>{{ $course->status }}</td>
-                                    <td>{{ $course->show_in_slider }}</td>
-                                    <td><a href="/admin/course/{{ $course->id }}/edit"><span class="label label-success">Edit</span></a></td>
-                                    <td><a href=""><span class="label label-danger">Delete</span></a></td>
+                                    <td>{{ $facility->id }}</td>
+                                    <td>{{ $facility->name }}</td>
+                                    <td>{{ $facility->phone_number }}</td>
+                                    <td>{{ $facility->address }}</td>
+                                    <td>{{ $facility->created_at }}</td>
+                                    <td>{{ $facility->updated_at }}</td>
+                                    <td><a href="/admin/facility/{{ $facility->id }}/edit"><span class="label label-success">Sửa</span></a></td>
+                                    <td><a href=""><span class="label label-danger">Xóa</span></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

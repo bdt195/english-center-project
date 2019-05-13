@@ -44,4 +44,8 @@ class Student extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function courses(){
+        return $this->belongsToMany('App\Course', 'student_course', 'student_id', 'course_id');
+    }
 }

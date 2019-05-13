@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Facility;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Course;
@@ -29,7 +30,8 @@ class CourseController extends Controller
     public function create()
     {
         $teachers = Teacher::all();
-        return view('admin.pages.course.create', ['teachers' => $teachers]);
+        $facilities = Facility::all();
+        return view('admin.pages.course.create', ['teachers' => $teachers, 'facilities' => $facilities]);
     }
 
     /**
@@ -46,16 +48,24 @@ class CourseController extends Controller
         $schedule = $request->input('schedule');
         $price = $request->input('price');
         $description = $request->input('description');
+        $sortDescription = $request->input('sort-description');
         $teachers = $request->input('teacher');
+        $facility = $request->input('facility');
+        $status = $request->input('status');
+        $showInSlider = $request->input('show-in-slider');
 
         $course = new Course();
-        $course->course_code = $courseCode;
+        $course->code = $courseCode;
         $course->name = $name;
         $course->start_date = $startDate;
         $course->schedule = implode(",", $schedule);
         $course->price = $price;
         $course->description = $description;
+        $course->sort_description = $sortDescription;
         $course->teachers = implode(",", $teachers);
+        $course->facility_id = $facility;
+        $course->status = $status;
+        $course->show_in_slider = $showInSlider;
         $course->save();
 
         return redirect()->action('Admin\CourseController@index');
@@ -81,7 +91,13 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        //
+        $course = Course::findOrFail($id);
+        $teachers = Teacher::all();
+        $facilities = Facility::all();
+
+        $course->teachers = explode(',', $course->teachers);
+        $course->schedule = explode(',', $course->schedule);
+        return view('admin.pages.course.edit', ['course' => $course, 'teachers' => $teachers, 'facilities' => $facilities]);
     }
 
     /**
@@ -95,21 +111,36 @@ class CourseController extends Controller
     {
         $course = Course::findOrFail($id);
 
-        $courseCode = $request->input('course-code');
+        $courseCode = $request->input('code');
         $name = $request->input('name');
         $startDate = $request->input('start-date');
         $schedule = $request->input('schedule');
         $price = $request->input('price');
         $description = $request->input('description');
-        $teacherID = $request->input('teacher-id');
+        $sortDescription = $request->input('sort-description');
+        $teachers = $request->input('teacher');
+        $facility = $request->input('facility');
+        $status = $request->input('status');
+        $showInSlider = $request->input('show-in-slider');
 
-        $course->course_code = $courseCode;
+        $course->code = $courseCode;
         $course->name = $name;
         $course->start_date = $startDate;
-        $course->schedule = $schedule;
+        $course->schedule = implode(",", $schedule);
         $course->price = $price;
+        $course->sort_description = $sortDescription;
         $course->description = $description;
-        $course->teacher_id = $teacherID;
+        $course->teachers = implode(",", $teachers);
+        $course->facility_id = $facility;
+        $course->status = $status;
+        $course->show_in_slider = $showInSlider;
+
+        if ($request->hasFile('avatar')) {
+            $file = $request->avatar;
+            $savedFile = $file->move('upload/course/image', time() . $file->getClientOriginalName());
+            $course->avatar = $savedFile->getPathname();
+        }
+
         $course->save();
 
         return redirect()->action('Admin\CourseController@index');

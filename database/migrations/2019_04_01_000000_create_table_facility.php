@@ -16,6 +16,7 @@ class CreateTableFacility extends Migration
         Schema::create('facility', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('phone_number');
             $table->text('address');
             $table->timestamps();
         });

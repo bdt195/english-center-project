@@ -11,9 +11,14 @@
 |
 */
 Route::get('/', 'HomeController@index');
-Route::get('/recruitment', 'HomeController@recruitment');
-Route::get('/recruitment/{id}', 'HomeController@viewRecruitment');
-Route::post('/recruitment/{id}', 'HomeController@postCV');
+
+Route::get('/recruitment', 'RecruitmentController@index');
+Route::get('/recruitment/{id}', 'RecruitmentController@view');
+Route::post('/recruitment/{id}', 'RecruitmentController@postCV');
+
+Route::get('/course', 'CourseController@index');
+Route::get('/course/{id}', 'CourseController@show');
+Route::post('/course/{id}', 'CourseController@enroll');
 
 Route::namespace('User')->group(function (){
     Route::prefix('user')->group(function () {
@@ -22,7 +27,6 @@ Route::namespace('User')->group(function (){
 });
 
 Route::namespace('Admin')->group(function () {
-    // Controllers Within The "App\Http\Controllers\Admin" Namespace
     Route::prefix('admin')->group(function () {
         Route::resource('category', 'CategoryController')->middleware('auth:admin');
         Route::resource('post', 'PostController')->middleware('auth:admin');
@@ -30,6 +34,7 @@ Route::namespace('Admin')->group(function () {
         Route::resource('teacher', 'TeacherController')->middleware('auth:admin');
         Route::resource('course', 'CourseController')->middleware('auth:admin');
         Route::resource('recruitment', 'RecruitmentController')->middleware('auth:admin');
+        Route::resource('facility', 'FacilityController')->middleware('auth:admin');
 
         Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
         Route::get('/', function(){

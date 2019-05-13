@@ -1,7 +1,7 @@
 <?php
   $user = null;
-  if(isset($authUser)){
-    $user = $authUser;
+  if(Auth::check()){
+    $user = Auth::user();
   }
 ?>
 <div class="header__top">
@@ -64,7 +64,7 @@
             <li class="menu__item"><a href="#">10 lý do nên học tại LE PLATEAU</a></li>
           </ul>
         </li>
-        <li class="menu__item"><a href="course-list.html">khóa học</a></li>
+        <li class="menu__item"><a href="/course">khóa học</a></li>
         <li class="menu__item"><a href="admissions.html">Tuyển sinh</a></li>
         <li class="menu__item"><a href="new-activity-list.html">Tin tức - Hoạt động</a></li>
         <li class="menu__item"><a href="student.html">Học viên</a></li>

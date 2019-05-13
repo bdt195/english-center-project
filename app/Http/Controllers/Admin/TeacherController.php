@@ -102,6 +102,6 @@ class TeacherController extends Controller
         $teacher = Teacher::findOrFail($id);
         $teacher->delete();
 
-        return redirect()->action('Admin\PostController@index');
+        return redirect()->action('Admin\TeacherController@index');
     }
 }

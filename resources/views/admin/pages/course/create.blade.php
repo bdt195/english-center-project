@@ -49,7 +49,7 @@
                         </div>
                         <!-- /.box-header -->
                         <!-- form start -->
-                        <form class="form-horizontal" method="POST" action="/admin/course">
+                        <form class="form-horizontal" method="POST" action="/admin/course" enctype="multipart/form-data">
                             @csrf
                             <div class="box-body">
                                 <div class="form-group">
@@ -57,6 +57,17 @@
 
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="code" name="code">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="facility" class="col-sm-3 control-label">Cơ sở</label>
+
+                                    <div class="col-sm-8">
+                                        <select class="form-control" id="facility" name="facility">
+                                        @foreach($facilities as $facility)
+                                            <option value="{{ $facility->id }}">{{ $facility->name }}</option>
+                                        @endforeach
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -144,11 +155,44 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
+                                    <label for="avatar" class="col-sm-3 control-label">Ảnh đại diện</label>
+                                    <div class="col-sm-8">
+                                        <input type="file" class="form-control" id="avatar" name="avatar"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sort-description" class="col-sm-3 control-label">Mô tả ngắn</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="sort-description" name="sort-description"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="description" class="col-sm-3 control-label">Description</label>
 
                                     <div class="col-sm-8">
                                         <textarea class="form-control" id="description" name="description"></textarea>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="status" class="col-sm-3 control-label">Trạng thái</label>
+
+                                <div class="col-sm-8">
+                                    <select class="form-control" id="status" name="status">
+                                        <option value="1" selected>Mở</option>
+                                        <option value="0">Khóa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="show-in-slider" class="col-sm-3 control-label">Khóa học nổi bật</label>
+
+                                <div class="col-sm-8">
+                                    <select class="form-control" id="show-in-slider" name="show-in-slider">
+                                        <option value="0" selected>Không</option>
+                                        <option value="1">Có</option>
+                                    </select>
                                 </div>
                             </div>
                             <!-- /.box-body -->
