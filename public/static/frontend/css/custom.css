@@ -1,3 +1,7 @@
+.main-content-container {
+  min-height: 40vh;
+}
+
 .box-shadow-bottom {
   box-shadow: 0px 2px 8px 2px #ccc;
 }
@@ -111,4 +115,25 @@ input {
 
 .avatar-user-inner-dropdown-menu a {
   color: #00457d !important;
+}
+
+.filter-list {
+  border: 1px solid #ccc;
+  background: rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.filter-list .title {
+  font-size: 18px;
+  padding: 15px;
+  background: rgba(51, 126, 51, 0.8);
+  color: #fff;
+}
+
+.filter-list a:hover {
+  text-decoration: none;
+}
+
+.max-w-300 {
+  max-width: 300px !important;
 }

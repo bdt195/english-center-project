@@ -33,7 +33,7 @@
             All Post
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
             <li><a href="#">CMS</a></li>
             <li class="active">Post</li>
         </ol>

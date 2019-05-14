@@ -11,4 +11,12 @@ class Course extends Model
     public function students(){
         return $this->belongsToMany('App\Student', 'student_course', 'course_id', 'student_id');
     }
+
+    public function category(){
+        return $this->belongsTo('App\CourseCategory', 'category_id');
+    }
+
+    public function facility(){
+        return $this->belongsTo('App\Facility', 'facility_id');
+    }
 }

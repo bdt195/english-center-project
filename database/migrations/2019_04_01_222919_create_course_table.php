@@ -15,6 +15,7 @@ class CreateCourseTable extends Migration
     {
         Schema::create('course', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('category_id');
             $table->string('code');
             $table->string('name');
             $table->date('start_date');
@@ -27,6 +28,11 @@ class CreateCourseTable extends Migration
             $table->smallInteger('status')->default(0);
             $table->smallInteger('show_in_slider')->default(0);
             $table->timestamps();
+
+            $table->foreign('category_id')
+                ->references('id')->on('course_category')
+                ->onDelete('cascade');
+
         });
     }
 

@@ -20,9 +20,14 @@ Route::get('/course', 'CourseController@index');
 Route::get('/course/{id}', 'CourseController@show');
 Route::post('/course/{id}', 'CourseController@enroll');
 
+Route::get('/test', 'TestController@index');
+Route::post('/test', 'TestController@register');
+
 Route::namespace('User')->group(function (){
     Route::prefix('user')->group(function () {
         Route::get('/profile', 'UserController@profile');
+        Route::post('/profile', 'UserController@update');
+        Route::post('/password', 'UserController@updatePassword');
     });
 });
 
@@ -35,6 +40,7 @@ Route::namespace('Admin')->group(function () {
         Route::resource('course', 'CourseController')->middleware('auth:admin');
         Route::resource('recruitment', 'RecruitmentController')->middleware('auth:admin');
         Route::resource('facility', 'FacilityController')->middleware('auth:admin');
+        Route::resource('test', 'TestController')->middleware('auth:admin');
 
         Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
         Route::get('/', function(){

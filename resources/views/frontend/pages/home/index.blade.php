@@ -1,6 +1,13 @@
 @extends('frontend/layouts/default')
 @section('content')
   <div class="main-content-container">
+    @if (Session::has('success'))
+      <div class="message-container">
+      @foreach(Session::get('success') as $item)
+        <p class="alert-success">{{ $item }}</p>
+      @endforeach
+      </div>
+    @endif
     <div class="section__slider">
       <div class="swiper-slider">
         <div class="swiper-container">
@@ -227,90 +234,6 @@
         <div class="students-pagination"></div>
       </div>
       <div class="pt-4"></div>
-    </div>
-    <div class="section__library">
-      <div class="pt-4"></div>
-      <div class="container">
-        <div class="pt-3"></div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="section__title">
-              <h3 class="text-left">Thư viện ảnh</h3>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="img-text-overlay"><a href="#"><img src="{{asset('/static/frontend/img/library-img/library-img-1.jpg')}}" alt="Tham quan học tập tại Măng Đen"/></a>
-                  <p> <a href="#">Tham quan học tập tại Măng Đen</a></p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="img-text-overlay"><a href="#"><img src="{{asset('/static/frontend/img/library-img/library-img-2.jpg')}}" alt="Tham quan học tập tại Măng Đen"/></a>
-                  <p> <a href="#">Tham quan học tập tại Măng Đen</a></p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="img-text-overlay"><a href="#"><img src="{{asset('/static/frontend/img/library-img/library-img-3.jpg')}}" alt="Nơi ăn, ở và học tập của học viên"/></a>
-                  <p> <a href="#">Nơi ăn, ở và học tập của học viên</a></p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="img-text-overlay"><a href="#"><img src="{{asset('/static/frontend/img/library-img/library-img-4.jpg')}}" alt="Hình ảnh hoạt động ngoại khóa"/></a>
-                  <p> <a href="#">Hình ảnh hoạt động ngoại khóa</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="section__title">
-              <h3 class="text-left">Thư viện video</h3>
-            </div>
-            <div class="video-yt">
-              <iframe src="https://www.youtube.com/embed/dqTTojTija8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section__news bg-grey">
-      <div class="container">
-        <div class="pt-5"></div>
-        <div class="section__title">
-          <h3>Tin tức nổi bật</h3>
-        </div>
-        <div class="pt-3"></div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card card-news">
-              <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-1.jpg')}}"/></a></div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h5>
-                <div class="text-icon-note"><i class="zmdi zmdi-time"></i><span>Thứ 2 22/10/2018 | 22:09</span></div>
-                <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat quis nostrud exercitation ullamco aliquip</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-news">
-              <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-2.jpg')}}"/></a></div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h5>
-                <div class="text-icon-note"><i class="zmdi zmdi-time"></i><span>Thứ 2 22/10/2018 | 22:09</span></div>
-                <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat quis nostrud exercitation ullamco aliquip</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-news">
-              <div class="card-img"><a href="#"><img src="{{asset('/static/frontend/img/news/news-3.jpg')}}"/></a></div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a></h5>
-                <div class="text-icon-note"><i class="zmdi zmdi-time"></i><span>Thứ 2 22/10/2018 | 22:09</span></div>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
   <!-- popup subscribe for student -->

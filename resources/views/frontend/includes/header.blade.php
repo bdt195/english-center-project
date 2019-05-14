@@ -55,7 +55,7 @@
     <div class="header__menu">
       <h1 class="header__logo"><a href="index.html"><img src="{{asset('/static/frontend/img/logo.png')}}" alt="" srcset=""></a></h1>
       <ul class="menu__main">
-        <li class="menu__item menu__item--has-child menu__current-item"><a href="introduction.html">Giới thiệu</a>
+        <li class="menu__item menu__item--has-child menu__current-item"><a href="/introduction">Giới thiệu</a>
           <ul class="menu__sub">
             <li class="menu__item menu__current-item"><a href="#">Sứ mệnh tầm nhìn</a></li>
             <li class="menu__item"><a href="#">Cơ sở vật chất</a></li>
@@ -65,11 +65,10 @@
           </ul>
         </li>
         <li class="menu__item"><a href="/course">khóa học</a></li>
-        <li class="menu__item"><a href="admissions.html">Tuyển sinh</a></li>
-        <li class="menu__item"><a href="new-activity-list.html">Tin tức - Hoạt động</a></li>
-        <li class="menu__item"><a href="student.html">Học viên</a></li>
+        <li class="menu__item"><a href="/student">Học viên</a></li>
+        <li class="menu__item"><a href="/test">Kiểm tra trình độ</a></li>
         <li class="menu__item"><a href="/recruitment">Tuyển dụng</a></li>
-        <li class="menu__item"><a href="contact.html">Liên hệ</a></li>
+        <li class="menu__item"><a href="/contact">Liên hệ</a></li>
       </ul>
       <div class="navbar-toggler-icon" data-control="aside"><i class="zmdi zmdi-menu"></i></div>
     </div>

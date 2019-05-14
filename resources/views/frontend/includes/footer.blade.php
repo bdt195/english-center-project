@@ -9,20 +9,13 @@
           <ul class="list-arrow-down">
             <li><a href="#">Giới Thiệu Về Le Plateau</a></li>
             <li><a href="#">Các Khoá Học</a></li>
-            <li><a href="#">Lịch khai giảng</a></li>
             <li><a href="#">Cảm nhận học viên</a></li>
-            <li><a href="#">Thư viện Video</a></li>
-            <li><a href="#">Thư viện hình ảnh</a></li>
           </ul>
         </div>
         <div class="col-6 col-sm-4 col-md-6 col-lg-4">
           <ul class="list-arrow-down">
-            <li><a href="#">Tin Tức - Hoạt động</a></li>
             <li><a href="#">Cơ Hội Nghề Nghiệp</a></li>
-            <li><a href="#">Tuyển sinh</a></li>
-            <li><a href="#">Cơ sở vật chất</a></li>
-            <li><a href="#">Cẩm nang khóa học</a></li>
-            <li><a href="#">Đăng ký thi thử</a></li>
+            <li><a href="/test">Đăng ký thi thử</a></li>
           </ul>
         </div>
         <div class="col-sm-4 col-md-6 col-lg-4">

@@ -73,5 +73,11 @@ class DatabaseSeeder extends Seeder
                 'password' => Hash::make('admin@123'),
             ]
         ]);
+
+        DB::table('course_category')->insert([
+            ['name' => 'Tiếng Anh'],
+            ['name' => 'Tiếng Nhật'],
+            ['name' => 'Tiếng Pháp'],
+        ]);
     }
 }

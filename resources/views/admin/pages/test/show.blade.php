@@ -30,12 +30,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            All Teacher
+            Danh sách đăng ký buổi thi
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-            <li><a href="#">Teacher</a></li>
-            <li class="active">Teacher</li>
+            <li><a href="#">Thi thử</a></li>
+            <li class="active">Danh sách đăng ký</li>
         </ol>
     </section>
 
@@ -54,8 +54,10 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
+                                <th>Date Of Birth</th>
                                 <th>Email</th>
                                 <th>Phone Number</th>
+                                <th>Address</th>
                                 <th>Created At</th>
                                 <th>Update At</th>
                                 <th>Edit</th>
@@ -63,15 +65,17 @@
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach ($teacherCollection as $teacher)
+                                @foreach ($studentCollection as $student)
                                 <tr>
-                                    <td>{{ $teacher->id }}</td>
-                                    <td>{{ $teacher->first_name . ' ' . $teacher->last_name }}</td>
-                                    <td>{{ $teacher->email }}</td>
-                                    <td>{{ $teacher->phone_number }}</td>
-                                    <td>{{ $teacher->created_at }}</td>
-                                    <td>{{ $teacher->updated_at }}</td>
-                                    <td><a href="/admin/student/{{ $teacher->id }}/edit"><span class="label label-success">Edit</span></a></td>
+                                    <td>{{ $student->id }}</td>
+                                    <td>{{ $student->first_name . ' ' . $student->last_name }}</td>
+                                    <td>{{ $student->date_of_birth }}</td>
+                                    <td>{{ $student->email }}</td>
+                                    <td>{{ $student->phone_number }}</td>
+                                    <td>{{ $student->address }}</td>
+                                    <td>{{ $student->created_at }}</td>
+                                    <td>{{ $student->updated_at }}</td>
+                                    <td><a href="/admin/student/{{ $student->id }}/edit"><span class="label label-success">Edit</span></a></td>
                                     <td><a href=""><span class="label label-danger">Delete</span></a></td>
                                 </tr>
                                 @endforeach

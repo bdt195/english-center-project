@@ -18,7 +18,7 @@
                 Create New Teacher
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
                 <li><a href="#">Teacher</a></li>
                 <li class="active">Create</li>
             </ol>

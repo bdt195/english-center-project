@@ -48,4 +48,8 @@ class Student extends Authenticatable
     public function courses(){
         return $this->belongsToMany('App\Course', 'student_course', 'student_id', 'course_id');
     }
+
+    public function tests(){
+        return $this->belongsToMany('App\Test', 'student_test', 'student_id', 'test_id');
+    }
 }
