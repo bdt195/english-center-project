@@ -10,7 +10,7 @@
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
                 <li><a href="#">Facility</a></li>
-                <li class="active">Create</li>
+                <li class="active">Tạo</li>
             </ol>
         </section>
 
@@ -51,7 +51,7 @@
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
                             <!-- /.box-footer -->
                         </form>

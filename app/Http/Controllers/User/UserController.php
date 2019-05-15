@@ -44,6 +44,12 @@ class UserController extends Controller
         $user->address = $address;
         $user->phone_number = $phoneNumber;
 
+        if ($request->hasFile('avatar')) {
+            $file = $request->avatar;
+            $savedFile = $file->move('upload/user/image', time() . $file->getClientOriginalName());
+            $user->avatar = $savedFile->getPathname();
+        }
+
         $user->save();
 
         return redirect()->back()->with('success', ['Cập nhật thông tin thành công.']);

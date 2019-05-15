@@ -23,6 +23,12 @@ Route::post('/course/{id}', 'CourseController@enroll');
 Route::get('/test', 'TestController@index');
 Route::post('/test', 'TestController@register');
 
+Route::get('/contact', 'ContactController@index');
+Route::post('/contact', 'ContactController@store');
+
+Route::get('/category/{id}', 'CategoryController@show');
+Route::get('/post/{id}', 'PostController@show');
+
 Route::namespace('User')->group(function (){
     Route::prefix('user')->group(function () {
         Route::get('/profile', 'UserController@profile');
@@ -41,6 +47,7 @@ Route::namespace('Admin')->group(function () {
         Route::resource('recruitment', 'RecruitmentController')->middleware('auth:admin');
         Route::resource('facility', 'FacilityController')->middleware('auth:admin');
         Route::resource('test', 'TestController')->middleware('auth:admin');
+        Route::resource('contact', 'ContactController')->middleware('auth:admin');
 
         Route::get('dashboard', 'AdminController@index')->name('admin.dashboard');
         Route::get('/', function(){

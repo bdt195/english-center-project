@@ -16,6 +16,13 @@
       <div class="page__content">
         <div class="container">
           <div class="page__title">
+            @if (!Session::has('flag') && Session::has('success'))
+              <div class="message-container alert-success">
+                @foreach(Session::get('success') as $item)
+                  <p>{{ $item }}</p>
+                @endforeach
+              </div>
+            @endif
             <h3>Liên hệ</h3>
             <ul>
               <li><a href="#"><i class="zmdi zmdi-folder"></i>Liên hệ</a></li>
@@ -34,12 +41,16 @@
               </div>
               <div class="contact-form">
                 <h3 class="text-uppercase font-weight-bold text-primary">FORM THÔNG TIN</h3>
-                <form action="" method="post"><input type="text" name="" id="input" class="form-control" value="" placeholder="Họ và tên" title="" >
-                  <input type="phone" name="" id="input" class="form-control" value="" placeholder="Điện thoại" title="" >
-                  <input type="email" name="" id="input" class="form-control" value="" placeholder="Email" title="" >
-                  <textarea name="" cols="30" rows="5" placeholder="Nội dung"></textarea>
+                <form action="/contact" method="POST">
+                  @csrf
+                  <input type="text" name="first-name" id="input" class="form-control" value="" placeholder="Tên" title="" >
+                  <input type="text" name="last-name" id="input" class="form-control" value="" placeholder="Họ và tên đệm" title="" >
+                  <input type="email" name="email" id="input" class="form-control" value="" placeholder="Email" title="" >
+                  <input type="text" name="phone-number" id="input" class="form-control" value="" placeholder="Số điện thoại" title="" >
+                  <input type="text" name="address" id="input" class="form-control" value="" placeholder="Địa chỉ" title="" >
+                  <textarea name="content" cols="30" rows="5" placeholder="Nội dung"></textarea>
+                  <button type="submit" class="contact-form-btn text-uppercase font-weight-bold">Gửi đi</button>
                 </form>
-                <button class="contact-form-btn text-uppercase font-weight-bold">Đăng ký ngay</button>
               </div>
             </div>
             <div class="col-lg-7">

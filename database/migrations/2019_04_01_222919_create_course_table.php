@@ -19,6 +19,7 @@ class CreateCourseTable extends Migration
             $table->string('code');
             $table->string('name');
             $table->date('start_date');
+            $table->date('end_date');
             $table->string('schedule');
             $table->string('teachers');
             $table->integer('price');

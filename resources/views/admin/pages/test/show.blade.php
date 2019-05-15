@@ -53,15 +53,15 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Name</th>
-                                <th>Date Of Birth</th>
+                                <th>Tên</th>
+                                <th>Ngày sinh</th>
                                 <th>Email</th>
-                                <th>Phone Number</th>
-                                <th>Address</th>
-                                <th>Created At</th>
-                                <th>Update At</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Số điện thoại</th>
+                                <th>Địa chỉ</th>
+                                <th>Ngày tạo</th>
+                                <th>Ngày cập nhật</th>
+                                <th>Sửa</th>
+                                <th>Xóa</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -75,8 +75,8 @@
                                     <td>{{ $student->address }}</td>
                                     <td>{{ $student->created_at }}</td>
                                     <td>{{ $student->updated_at }}</td>
-                                    <td><a href="/admin/student/{{ $student->id }}/edit"><span class="label label-success">Edit</span></a></td>
-                                    <td><a href=""><span class="label label-danger">Delete</span></a></td>
+                                    <td><a href="/admin/student/{{ $student->id }}/edit"><span class="label label-success">Sửa</span></a></td>
+                                    <td><a href=""><span class="label label-danger">Xóa</span></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

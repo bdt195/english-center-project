@@ -55,8 +55,8 @@
                                 <th>Id</th>
                                 <th>File Name</th>
                                 <th>Mime Type</th>
-                                <th>Created At</th>
-                                <th>Delete</th>
+                                <th>Ngày tạo</th>
+                                <th>Xóa</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -66,7 +66,7 @@
                                     <td><a href="/{{ $cv->file_path }}">{{ $cv->file_name }}</a></td>
                                     <td>{{ $cv->file_type }}</td>
                                     <td>{{ $cv->created_at }}</td>
-                                    <td><a href=""><span class="label label-danger">Delete</span></a></td>
+                                    <td><a href=""><span class="label label-danger">Xóa</span></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

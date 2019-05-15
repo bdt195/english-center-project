@@ -30,12 +30,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            All Teacher
+            All Giảng viên
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-            <li><a href="#">Teacher</a></li>
-            <li class="active">Teacher</li>
+            <li><a href="#">Giảng viên</a></li>
+            <li class="active">Giảng viên</li>
         </ol>
     </section>
 
@@ -53,13 +53,13 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Name</th>
+                                <th>Tên</th>
                                 <th>Email</th>
-                                <th>Phone Number</th>
-                                <th>Created At</th>
-                                <th>Update At</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Số điện thoại</th>
+                                <th>Ngày tạo</th>
+                                <th>Ngày cập nhật</th>
+                                <th>Sửa</th>
+                                <th>Xóa</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -71,8 +71,8 @@
                                     <td>{{ $teacher->phone_number }}</td>
                                     <td>{{ $teacher->created_at }}</td>
                                     <td>{{ $teacher->updated_at }}</td>
-                                    <td><a href="/admin/student/{{ $teacher->id }}/edit"><span class="label label-success">Edit</span></a></td>
-                                    <td><a href=""><span class="label label-danger">Delete</span></a></td>
+                                    <td><a href="/admin/student/{{ $teacher->id }}/edit"><span class="label label-success">Sửa</span></a></td>
+                                    <td><a href=""><span class="label label-danger">Xóa</span></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

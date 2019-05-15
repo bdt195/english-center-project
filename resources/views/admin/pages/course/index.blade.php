@@ -30,12 +30,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            All Course
+            Tất cả khóa học
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-            <li><a href="#">Course</a></li>
-            <li class="active">Course</li>
+            <li><a href="#">Khóa học</a></li>
+            <li class="active">Khóa học</li>
         </ol>
     </section>
 
@@ -53,16 +53,17 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Course Code</th>
-                                <th>Name</th>
-                                <th>Start Date</th>
-                                <th>Schedule</th>
-                                <th>Price</th>
-                                <th>Teacher</th>
-                                <th>Status</th>
-                                <th>Show In Slider</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Mã khóa học</th>
+                                <th>Tên</th>
+                                <th>Ngày bắt đầu</th>
+                                <th>Ngày kết thúc</th>
+                                <th>Lịch học</th>
+                                <th>Giá</th>
+                                <th>Giảng viên</th>
+                                <th>Trạng thái</th>
+                                <th>Hiển thị nổi bật</th>
+                                <th>Sửa</th>
+                                <th>Xóa</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -72,13 +73,14 @@
                                     <td>{{ $course->code }}</td>
                                     <td>{{ $course->name }}</td>
                                     <td>{{ $course->start_date }}</td>
+                                    <td>{{ $course->end_date }}</td>
                                     <td>{{ $course->schedule }}</td>
                                     <td>{{ $course->price }}</td>
                                     <td>{{ $course->teachers }}</td>
                                     <td>{{ $course->status }}</td>
                                     <td>{{ $course->show_in_slider }}</td>
-                                    <td><a href="/admin/course/{{ $course->id }}/edit"><span class="label label-success">Edit</span></a></td>
-                                    <td><a href=""><span class="label label-danger">Delete</span></a></td>
+                                    <td><a href="/admin/course/{{ $course->id }}/edit"><span class="label label-success">Sửa</span></a></td>
+                                    <td><a href=""><span class="label label-danger">Xóa</span></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

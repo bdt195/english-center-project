@@ -20,7 +20,7 @@
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
                 <li><a href="#">Student</a></li>
-                <li class="active">Create</li>
+                <li class="active">Tạo</li>
             </ol>
         </section>
 
@@ -41,14 +41,14 @@
                             <input name="_method" type="hidden" value="PUT">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="first-name" class="col-sm-3 control-label">First Name</label>
+                                    <label for="first-name" class="col-sm-3 control-label">Tên</label>
 
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="first-name" name="first-name" value="{{ $teacher->first_name }}">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="last-name" class="col-sm-3 control-label">Last Name</label>
+                                    <label for="last-name" class="col-sm-3 control-label">Họ và tên đệm</label>
 
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="first-name" name="last-name" value="{{ $teacher->last_name }}">
@@ -62,7 +62,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone-number" class="col-sm-3 control-label">Phone Number</label>
+                                    <label for="phone-number" class="col-sm-3 control-label">Số điện thoại</label>
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="phone-number" name="phone-number"  value="{{ $teacher->phone_number }}">
                                     </div>
@@ -70,7 +70,7 @@
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
                             <!-- /.box-footer -->
                         </form>

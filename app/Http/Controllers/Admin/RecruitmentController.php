@@ -45,6 +45,7 @@ class RecruitmentController extends Controller
         $recruitment->title = $title;
         $recruitment->content = $content;
         $recruitment->expire_date = $expireDate;
+        $recruitment->facility_id = 1;
         $recruitment->save();
 
         return redirect()->action('Admin\RecruitmentController@index');

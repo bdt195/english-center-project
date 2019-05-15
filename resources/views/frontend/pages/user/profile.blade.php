@@ -1,25 +1,40 @@
 @extends('frontend/layouts/default')
 @section('content')
 <?php $user = Auth::user() ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+          $('#avatar-profile').css('background-image', 'url(' + e.target.result + ')');
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#avatar").change(function() {
+      console.log("This");
+      readURL(this);
+    });
+  });
+</script>
 <div class="main-content-container">
   <div class="container">
     <div class="py-5">
       <div class="row">
-        @if (Session::has('success'))
-          <div class="message-container col-12">
-            @foreach(Session::get('success') as $item)
-              <p class="alert-success">{{ $item }}</p>
-            @endforeach
-          </div>
-        @endif
-        @if (Session::has('errors'))
-          <div class="message-container col-12">
-            @foreach(Session::get('errors') as $item)
-              <p class="alert-error">{{ $item }}</p>
-            @endforeach
-          </div>
-        @endif
         <div class="col-3">
+          <div id="avatar-profile" class="avatar-profile"
+               @if($user->avatar)
+               style="background-image: url('/{{ $user->avatar }}')"
+               @else
+               style="background-image: url('/static/frontend/img/profile.png')
+               @endif
+          ">
+          </div>
           <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <a class="nav-link @if(!Session::has('flag')) active show @endif" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="@if(!Session::has('flag')) true @else false @endif">Thông tin cá nhân</a>
             <a class="nav-link" id="v-pills-edit-profile-tab" data-toggle="pill" href="#v-pills-edit-profile" role="tab" aria-controls="v-pills-edit-profile" aria-selected="false">Sửa thông tin cá nhân</a>
@@ -29,6 +44,13 @@
         </div>
         <div class="col-9">
           <div class="tab-content" id="v-pills-tabContent">
+            @if (!Session::has('flag') && Session::has('success'))
+              <div class="message-container col-12 alert-success">
+                @foreach(Session::get('success') as $item)
+                  <p>{{ $item }}</p>
+                @endforeach
+              </div>
+            @endif
             <div class="tab-pane fade @if(!Session::has('flag')) active show @endif" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
               <div class="border rounded p-3 bg-light">
                 <p><i class="zmdi zmdi-info text-dark mr-2"></i>{{ $user->first_name . $user->last_name }}</p>
@@ -40,8 +62,14 @@
             </div>
             <div class="tab-pane fade" id="v-pills-edit-profile" role="tabpanel" aria-labelledby="v-pills-edit-profile-tab">
               <div class="border rounded p-3 bg-light">
-                <form action="/user/profile" method="POST">
+                <form action="/user/profile" method="POST" enctype="multipart/form-data">
                   @csrf
+                  <div class="form-group row">
+                    <label for="avatar" class="col-sm-3 col-form-label font-weight-bold"><i class="zmdi zmdi-face text-dark mr-2"></i>Ảnh đại diện</label>
+                    <div class="col-sm-9">
+                      <input type="file" class="form-control-file btn btn-info" id="avatar" name="avatar">
+                    </div>
+                  </div>
                   <div class="form-group row">
                     <label for="first-name" class="col-sm-3 col-form-label font-weight-bold"><i class="zmdi zmdi-info text-dark mr-2"></i>Họ Và Tên Đệm</label>
                     <div class="col-sm-9">
@@ -86,39 +114,30 @@
               <div class="border rounded p-3 bg-light">
                 <div class="list-course-registed">
                   <div class="row">
+                    @foreach($user->courses as $course)
                     <div class="col-md-6">
                       <div class="course__item border rounded">
-                        <div class="course__item--img"><img src="{{asset('frontend/img/course/course-1.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
+                        <div class="course__item--img"><img src="/{{ $course->avatar }}" alt="" srcset="" width="375" height="180"/></div>
                         <div class="course__item--content">
-                          <h3 class="course__item--title"><a href="#">Khóa học tiếng Anh giao tiếp cơ bản</a></h3>
-                          <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
+                          <h3 class="course__item--title"><a href="#">{{ $course->name }}</a></h3>
+                          <p class="course__item--des">{{ $course->sort_description }}</p><a class="course__item--button" href="/course/{{ $course->id }}">Xem chi tiết</a>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="course__item border rounded">
-                        <div class="course__item--img"><img src="{{asset('frontend/img/course/course-1.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
-                        <div class="course__item--content">
-                          <h3 class="course__item--title"><a href="#">Khóa học tiếng Anh giao tiếp cơ bản</a></h3>
-                          <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="course__item border rounded">
-                        <div class="course__item--img"><img src="{{asset('frontend/img/course/course-1.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
-                        <div class="course__item--content">
-                          <h3 class="course__item--title"><a href="#">Khóa học tiếng Anh giao tiếp cơ bản</a></h3>
-                          <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
-                        </div>
-                      </div>
-                    </div>
+                    @endforeach
                   </div>
                 </div>
               </div>
             </div>
             <div class="tab-pane fade @if(Session::get('flag') == 'password') active show @endif" id="v-pills-change-password" role="tabpanel" aria-labelledby="v-pills-change-password-tab">
               <div class="border rounded p-3 bg-light">
+                @if (Session::get('flag') == 'password')
+                  <div class="message-container col-12 alert-danger">
+                    @foreach(Session::get('errors') as $item)
+                      <p class="alert-error">{{ $item }}</p>
+                    @endforeach
+                  </div>
+                @endif
                 <form action="/user/password" method="POST">
                   @csrf
                   <div class="form-group">

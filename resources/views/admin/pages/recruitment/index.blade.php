@@ -30,7 +30,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            All Course
+            Tất cả tin tuyển dụng
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
@@ -53,12 +53,12 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Title</th>
-                                <th>Expire Date</th>
-                                <th>Created At</th>
-                                <th>Updated At</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Tiêu đề</th>
+                                <th>Ngày hết hạn</th>
+                                <th>Ngày tạo</th>
+                                <th>Ngày cập nhật</th>
+                                <th>Sửa</th>
+                                <th>Xóa</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -69,8 +69,8 @@
                                     <td>{{ $recruitment->expire_date }}</td>
                                     <td>{{ $recruitment->created_at }}</td>
                                     <td>{{ $recruitment->updated_at }}</td>
-                                    <td><a href="/admin/recruitment/{{ $recruitment->id }}/edit"><span class="label label-success">Edit</span></a></td>
-                                    <td><a href=""><span class="label label-danger">Delete</span></a></td>
+                                    <td><a href="/admin/recruitment/{{ $recruitment->id }}/edit"><span class="label label-success">Sửa</span></a></td>
+                                    <td><a href=""><span class="label label-danger">Xóa</span></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

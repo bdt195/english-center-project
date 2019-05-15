@@ -3,6 +3,8 @@
   if(Auth::check()){
     $user = Auth::user();
   }
+
+  $categories = \App\Category::where('parent_id', 1)->get();
 ?>
 <div class="header__top">
   <div class="container">
@@ -25,7 +27,7 @@
             <button class="btn btn-secondary dropdown-toggle avatar-user-inner" type="button" id="avatar-user-inner-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="avatar-user">
                 @if($user->avatar)
-                <img src="{{ $user->avatar }}" alt="" class="mr-2">
+                <img src="/{{ $user->avatar }}" alt="" class="mr-2">
                 @else
                 <img src="{{asset('/static/frontend/img/profile.png')}}" alt="" class="mr-2">
                 @endif
@@ -53,7 +55,7 @@
 <div class="header__main">
   <div class="container">
     <div class="header__menu">
-      <h1 class="header__logo"><a href="index.html"><img src="{{asset('/static/frontend/img/logo.png')}}" alt="" srcset=""></a></h1>
+      <h1 class="header__logo"><a href="/"><img src="{{asset('/static/frontend/img/logo.png')}}" alt="" srcset=""></a></h1>
       <ul class="menu__main">
         <li class="menu__item menu__item--has-child menu__current-item"><a href="/introduction">Giới thiệu</a>
           <ul class="menu__sub">
@@ -64,8 +66,15 @@
             <li class="menu__item"><a href="#">10 lý do nên học tại LE PLATEAU</a></li>
           </ul>
         </li>
+        <li class="menu__item menu__item--has-child"><a href="#">Bài viết</a>
+          <ul class="menu__sub">
+            @foreach($categories as $category)
+              <li class="menu__item"><a href="/category/{{ $category->id }}">{{ $category->name }}</a></li>
+            @endforeach
+          </ul>
+        </li>
         <li class="menu__item"><a href="/course">khóa học</a></li>
-        <li class="menu__item"><a href="/student">Học viên</a></li>
+{{--        <li class="menu__item"><a href="/student">Học viên</a></li>--}}
         <li class="menu__item"><a href="/test">Kiểm tra trình độ</a></li>
         <li class="menu__item"><a href="/recruitment">Tuyển dụng</a></li>
         <li class="menu__item"><a href="/contact">Liên hệ</a></li>

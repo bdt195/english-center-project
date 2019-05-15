@@ -30,7 +30,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            All Post
+            Tất cả bài viết
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
@@ -53,14 +53,14 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Title</th>
-                                <th>Author</th>
-                                <th>Category</th>
-                                <th>Status</th>
-                                <th>Created At</th>
-                                <th>Update At</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Tiêu đề</th>
+                                <th>Tác giả</th>
+                                <th>Danh mục</th>
+                                <th>Trạng thái</th>
+                                <th>Ngày tạo</th>
+                                <th>Ngày cập nhật</th>
+                                <th>Sửa</th>
+                                <th>Xóa</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -71,14 +71,14 @@
                                     <td>{{ $post->author }}</td>
                                     <td>{{ $post->category->name }}</td>
                                     @if ($post->status == 1))
-                                    <td><span class="label label-success">Enable</span></td>
+                                    <td><span class="label label-success">Hiện</span></td>
                                     @elseif($post->status == 0)
-                                    <td><span class="label label-danger">Disable</span></td>
+                                    <td><span class="label label-danger">Ẩn</span></td>
                                     @endif
                                     <td>{{ $post->created_at }}</td>
                                     <td>{{ $post->updated_at }}</td>
-                                    <td><a href="/admin/post/{{ $post->id }}/edit"><span class="label label-success">Edit</span></a></td>
-                                    <td><a href=""><span class="label label-danger">Delete</span></a></td>
+                                    <td><a href="/admin/post/{{ $post->id }}/edit"><span class="label label-success">Sửa</span></a></td>
+                                    <td><a href=""><span class="label label-danger">Xóa</span></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

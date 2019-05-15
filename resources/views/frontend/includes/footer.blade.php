@@ -8,13 +8,13 @@
         <div class="col-6 col-sm-4 col-md-6 col-lg-4">
           <ul class="list-arrow-down">
             <li><a href="#">Giới Thiệu Về Le Plateau</a></li>
-            <li><a href="#">Các Khoá Học</a></li>
-            <li><a href="#">Cảm nhận học viên</a></li>
+            <li><a href="/course">Các Khoá Học</a></li>
+{{--            <li><a href="#">Cảm nhận học viên</a></li>--}}
           </ul>
         </div>
         <div class="col-6 col-sm-4 col-md-6 col-lg-4">
           <ul class="list-arrow-down">
-            <li><a href="#">Cơ Hội Nghề Nghiệp</a></li>
+            <li><a href="/recruitment">Cơ Hội Nghề Nghiệp</a></li>
             <li><a href="/test">Đăng ký thi thử</a></li>
           </ul>
         </div>

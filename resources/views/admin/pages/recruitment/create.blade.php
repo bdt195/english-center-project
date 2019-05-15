@@ -33,7 +33,7 @@
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
                 <li><a href="#">Recruitment</a></li>
-                <li class="active">Create</li>
+                <li class="active">Tạo</li>
             </ol>
         </section>
 
@@ -53,21 +53,21 @@
                             @csrf
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="title" class="col-sm-3 control-label">Title</label>
+                                    <label for="title" class="col-sm-3 control-label">Tiêu đề</label>
 
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="title" name="title">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="content" class="col-sm-3 control-label">Content</label>
+                                    <label for="content" class="col-sm-3 control-label">Nội dung</label>
 
                                     <div class="col-sm-8">
                                         <textarea class="form-control" id="content" name="content"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="expire-date" class="col-sm-3 control-label">Expire Date</label>
+                                    <label for="expire-date" class="col-sm-3 control-label">Ngày hết hạn</label>
 
                                     <div class="col-sm-8">
                                         <input type="date" class="form-control" id="expire-date" name="expire-date">
@@ -76,7 +76,7 @@
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
                             <!-- /.box-footer -->
                         </form>

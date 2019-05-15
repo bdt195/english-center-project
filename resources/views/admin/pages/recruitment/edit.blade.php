@@ -33,7 +33,7 @@
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
                 <li><a href="#">Recruitment</a></li>
-                <li class="active">Edit</li>
+                <li class="active">Sửa</li>
             </ol>
         </section>
 
@@ -54,21 +54,21 @@
                             <input name="_method" type="hidden" value="PUT">
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="title" class="col-sm-3 control-label">Title</label>
+                                    <label for="title" class="col-sm-3 control-label">Tiêu đề</label>
 
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="title" name="title" value="{{ $recruitment->title }}">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="content" class="col-sm-3 control-label">Content</label>
+                                    <label for="content" class="col-sm-3 control-label">Nội dung</label>
 
                                     <div class="col-sm-8">
                                         <textarea class="form-control" id="content" name="content">{{ $recruitment->content }}"</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="expire-date" class="col-sm-3 control-label">Expire Date</label>
+                                    <label for="expire-date" class="col-sm-3 control-label">Ngày hết hạn</label>
 
                                     <div class="col-sm-8">
                                         <input type="date" class="form-control" id="expire-date" name="expire-date" value="{{ $recruitment->expire_date }}">
@@ -77,7 +77,7 @@
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
                             <!-- /.box-footer -->
                         </form>

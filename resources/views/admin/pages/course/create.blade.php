@@ -28,12 +28,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Create New Course
+                Tạo khóa học
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-                <li><a href="#">Course</a></li>
-                <li class="active">Create</li>
+                <li><a href="#">Khóa học</a></li>
+                <li class="active">Tạo</li>
             </ol>
         </section>
 
@@ -53,7 +53,7 @@
                             @csrf
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="code" class="col-sm-3 control-label">Course Code</label>
+                                    <label for="code" class="col-sm-3 control-label">Mã khóa học</label>
 
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="code" name="code">
@@ -71,28 +71,35 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="name" class="col-sm-3 control-label">Name</label>
+                                    <label for="name" class="col-sm-3 control-label">Tên</label>
 
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="name" name="name">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="start-date" class="col-sm-3 control-label">Start Date</label>
+                                    <label for="start-date" class="col-sm-3 control-label">Ngày bắt đầu</label>
 
                                     <div class="col-sm-8">
                                         <input type="date" class="form-control" id="start-date" name="start-date">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="price" class="col-sm-3 control-label">Price</label>
+                                    <label for="end-date" class="col-sm-3 control-label">Ngày kết thúc</label>
+
+                                    <div class="col-sm-8">
+                                        <input type="date" class="form-control" id="end-date" name="end-date">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="price" class="col-sm-3 control-label">Giá</label>
 
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="price" name="price"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="teacher" class="col-sm-3 control-label">Teacher</label>
+                                    <label for="teacher" class="col-sm-3 control-label">Giảng viên</label>
 
                                     <div class="col-sm-8">
                                         <select class="form-control" id="teacher" name="teacher[]" multiple>
@@ -103,7 +110,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="schedule" class="col-sm-3 control-label">Schedule</label>
+                                    <label for="schedule" class="col-sm-3 control-label">Lịch học</label>
 
                                     <div class="col-sm-8">
                                         <table id="schedule">
@@ -168,7 +175,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="description" class="col-sm-3 control-label">Description</label>
+                                    <label for="description" class="col-sm-3 control-label">Mô tả</label>
 
                                     <div class="col-sm-8">
                                         <textarea class="form-control" id="description" name="description"></textarea>
@@ -197,7 +204,7 @@
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
                             <!-- /.box-footer -->
                         </form>

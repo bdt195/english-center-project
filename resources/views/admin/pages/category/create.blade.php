@@ -5,12 +5,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Create New Category
+                Tạo danh mục mới
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-                <li><a href="#">Category</a></li>
-                <li class="active">Create</li>
+                <li><a href="#">Danh mục</a></li>
+                <li class="active">Tạo</li>
             </ol>
         </section>
 
@@ -30,7 +30,7 @@
                             @csrf
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="category-name" class="col-sm-3 control-label">Name</label>
+                                    <label for="category-name" class="col-sm-3 control-label">Tên</label>
 
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="category-name" name="category-name">
@@ -49,7 +49,7 @@
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Create</button>
+                                <button type="submit" class="btn btn-primary">Tạo</button>
                             </div>
                             <!-- /.box-footer -->
                         </form>

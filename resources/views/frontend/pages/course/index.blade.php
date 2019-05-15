@@ -25,6 +25,11 @@
 
       <div class="row">
         <div class="col-md-9">
+          @if (!count($courses))
+            <div class="message-container">
+              <p class="alert-danger">Không tìm thấy khóa học phù hợp.</p>
+            </div>
+          @endif
           <div class="row">
             @foreach($courses as $course)
               <div class="col-lg-4 col-md-6">
@@ -40,33 +45,35 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="filter">
-            <div class="filter-list filter-list-link">
-              <h3 class="title">Tìm theo cơ sở</h3>
-              <ul class="list-style-star px-2">
-                <li><a href="#">Cơ sở 1</a></li>
-                <li><a href="#">Cơ sở 2</a></li>
-                <li><a href="#">Cơ sở 3</a></li>
-              </ul>
+          <form action="" method="GET">
+            <div class="filter">
+              <div class="filter-list filter-list-checkbox">
+                <h3 class="title">Lọc theo cơ sở</h3>
+                <ul class="list-unstyled px-2">
+                  @foreach($facilities as $facility)
+                  <li>
+                    <input type="checkbox" class="mr-2" value="{{ $facility->id }}" name="facility[]">
+                    <a href="#">{{ $facility->name }}</a>
+                  </li>
+                  @endforeach
+                </ul>
+              </div>
             </div>
-            <div class="filter-list filter-list-checkbox">
-              <h3 class="title">Tìm theo cơ sở</h3>
-              <ul class="list-unstyled px-2">
-                <li>
-                  <input type="checkbox" class="mr-2">
-                  <a href="#">Cơ sở 1</a>
-                </li>
-                <li>
-                  <input type="checkbox" class="mr-2">
-                  <a href="#">Cơ sở 2</a>
-                </li>
-                <li>
-                  <input type="checkbox" class="mr-2">
-                  <a href="#">Cơ sở 3</a>
-                </li>
-              </ul>
+            <div class="filter">
+              <div class="filter-list filter-list-checkbox">
+                <h3 class="title">Lọc theo danh mục</h3>
+                <ul class="list-unstyled px-2">
+                  @foreach($categories as $category)
+                    <li>
+                      <input type="checkbox" class="mr-2" value="{{ $category->id }}" name="category[]">
+                      <a href="#">{{ $category->name }}</a>
+                    </li>
+                  @endforeach
+                </ul>
+              </div>
             </div>
-          </div>
+            <button type="submit">Lọc khóa học</button>
+          </form>
         </div>
       </div>
     </div>

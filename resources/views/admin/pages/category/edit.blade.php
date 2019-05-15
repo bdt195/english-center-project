@@ -5,12 +5,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Edit Category {{ $category->name }}
+                Chỉnh sửa danh mục {{ $category->name }}
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-                <li><a href="#">Category</a></li>
-                <li class="active">Edit</li>
+                <li><a href="#">Danh mục</a></li>
+                <li class="active">Sửa</li>
             </ol>
         </section>
 
@@ -36,7 +36,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="category-name" class="col-sm-3 control-label">Name</label>
+                                    <label for="category-name" class="col-sm-3 control-label">Tên</label>
 
                                     <div class="col-sm-8">
                                         <input type="text" class="form-control" id="category-name" name="category-name" value="{{ $category->name }}">
@@ -57,7 +57,7 @@
                             </div>
                             <!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
                             <!-- /.box-footer -->
                         </form>

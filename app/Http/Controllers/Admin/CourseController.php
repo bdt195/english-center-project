@@ -45,6 +45,7 @@ class CourseController extends Controller
         $courseCode = $request->input('code');
         $name = $request->input('name');
         $startDate = $request->input('start-date');
+        $endDate = $request->input('end-date');
         $schedule = $request->input('schedule');
         $price = $request->input('price');
         $description = $request->input('description');
@@ -58,6 +59,7 @@ class CourseController extends Controller
         $course->code = $courseCode;
         $course->name = $name;
         $course->start_date = $startDate;
+        $course->end_date = $endDate;
         $course->schedule = implode(",", $schedule);
         $course->price = $price;
         $course->description = $description;
@@ -66,6 +68,13 @@ class CourseController extends Controller
         $course->facility_id = $facility;
         $course->status = $status;
         $course->show_in_slider = $showInSlider;
+
+        if ($request->hasFile('avatar')) {
+            $file = $request->avatar;
+            $savedFile = $file->move('upload/course/image', time() . $file->getClientOriginalName());
+            $course->avatar = $savedFile->getPathname();
+        }
+
         $course->save();
 
         return redirect()->action('Admin\CourseController@index');
@@ -114,6 +123,7 @@ class CourseController extends Controller
         $courseCode = $request->input('code');
         $name = $request->input('name');
         $startDate = $request->input('start-date');
+        $endDate = $request->input('end-date');
         $schedule = $request->input('schedule');
         $price = $request->input('price');
         $description = $request->input('description');
@@ -126,6 +136,7 @@ class CourseController extends Controller
         $course->code = $courseCode;
         $course->name = $name;
         $course->start_date = $startDate;
+        $course->end_date = $endDate;
         $course->schedule = implode(",", $schedule);
         $course->price = $price;
         $course->sort_description = $sortDescription;

@@ -18,8 +18,15 @@
         <div class="row">
           <div class="col-md-8 col-lg-9">
             <div class="content-header">
+              @if (Session::has('success'))
+                <div class="message-container">
+                  @foreach(Session::get('success') as $item)
+                    <p class="alert-success">{{ $item }}</p>
+                  @endforeach
+                </div>
+              @endif
               <h2 class="title">{{ $course->name }}</h2>
-              @if(!$isEnrolled && !$isDuplicate)
+              @if(!$isEnrolled && !$isDuplicate && Auth::check())
               <button id="enroll-btn">Ghi Danh</button>
               @elseif($isEnrolled)
               <p class="text-danger">Bạn đã đăng ký khóa học này.</p>

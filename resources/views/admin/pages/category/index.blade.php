@@ -30,12 +30,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            All Category
+            Tất cả danh mục
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
-            <li><a href="#">CMS</a></li>
-            <li class="active">Category</li>
+            <li><a href="#">QUản lý nội dung</a></li>
+            <li class="active">Danh mục</li>
         </ol>
     </section>
 
@@ -52,13 +52,13 @@
                         <table id="example1" class="table table-bordered table-striped">
                             <thead>
                             <tr>
-                                <th>Category ID</th>
-                                <th>Name</th>
+                                <th>ID</th>
+                                <th>Tên</th>
                                 <th>Parent Category</th>
-                                <th>Created At</th>
-                                <th>Update At</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Ngày tạo</th>
+                                <th>Ngày cập nhật</th>
+                                <th>Sửa</th>
+                                <th>Xóa</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -74,8 +74,8 @@
                                     <td>{{ $category->created_at }}</td>
                                     <td>{{ $category->updated_at }}</td>
                                     @if($category->id != 1)
-                                    <td><a href="/admin/category/{{ $category->id }}/edit"><span class="label label-success">Edit</span></a></td>
-                                    <td><a href=""><span class="label label-danger">Delete</span></a></td>
+                                    <td><a href="/admin/category/{{ $category->id }}/edit"><span class="label label-success">Sửa</span></a></td>
+                                    <td><a href=""><span class="label label-danger">Xóa</span></a></td>
                                     @endif
                                 </tr>
                                 @endforeach

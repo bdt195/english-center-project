@@ -33,60 +33,17 @@
         <div class="swiper-course">
           <div class="swiper-container">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="course__item">
-                  <div class="course__item--img"><img src="{{asset('/static/frontend/img/course/course-1.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
-                  <div class="course__item--content">
-                    <h3 class="course__item--title"><a href="#">Khóa học tiếng Anh giao tiếp cơ bản</a></h3>
-                    <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
+              @foreach($courses as $course)
+                <div class="swiper-slide">
+                  <div class="course__item">
+                    <div class="course__item--img"><img src="/{{ $course->avatar }}" alt="" srcset="" width="375" height="180"/></div>
+                    <div class="course__item--content">
+                      <h3 class="course__item--title"><a href="#">{{ $course->name }}</a></h3>
+                      <p class="course__item--des">{{ $course->sort_description }}</p><a class="course__item--button" href="/course/{{ $course->id }}">Xem chi tiết</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="course__item">
-                  <div class="course__item--img"><img src="{{asset('/static/frontend/img/course/course-2.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
-                  <div class="course__item--content">
-                    <h3 class="course__item--title"><a href="#">Khóa học luyện thi IELTS tiếng Anh</a></h3>
-                    <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="course__item">
-                  <div class="course__item--img"><img src="{{asset('/static/frontend/img/course/course-3.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
-                  <div class="course__item--content">
-                    <h3 class="course__item--title"><a href="#">Khóa học Tài chính</a></h3>
-                    <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="course__item">
-                  <div class="course__item--img"><img src="{{asset('/static/frontend/img/course/course-1.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
-                  <div class="course__item--content">
-                    <h3 class="course__item--title"><a href="#">Khóa học tiếng Anh giao tiếp cơ bản</a></h3>
-                    <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="course__item">
-                  <div class="course__item--img"><img src="{{asset('/static/frontend/img/course/course-2.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
-                  <div class="course__item--content">
-                    <h3 class="course__item--title"><a href="#">Khóa học luyện thi IELTS tiếng Anh</a></h3>
-                    <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="course__item">
-                  <div class="course__item--img"><img src="{{asset('/static/frontend/img/course/course-3.jpg')}}" alt="" srcset="" width="375" height="180"/></div>
-                  <div class="course__item--content">
-                    <h3 class="course__item--title"><a href="#">Khóa học Tài chính</a></h3>
-                    <p class="course__item--des">Trang bị kiến thức, hoàn thiện kỹ năng và rèn luyện chiến thuật làm bài để đạt điểm cao trong các kỳ thi quốc tế IELTS, TOEFL iBT nhằm đáp ứng nhu cầu học tập và công việc của mỗi học viên</p><a class="course__item--button" href="#">Xem chi tiết</a>
-                  </div>
-                </div>
-              </div>
+              @endforeach
             </div>
           </div>
           <!-- Add Arrows-->
@@ -142,99 +99,99 @@
         </div>
       </div>
     </div>
-    <div class="section__students">
-      <div class="container">
-        <div class="row justify-content-lg-center">
-          <div class="col-lg-8">
-            <div class="pt-3"></div>
-            <div class="pt-3"></div>
-            <div class="section__title">
-              <h3>Cảm nhận học viên</h3>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-students">
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="students__item">
-                  <div class="students__item-feel">
-                    <p class="is-overflow">Đoàn Cao Hương Thảo hiện đang là học sinh lớp 12 tại trường THPT Chuyên Võ Nguyên Giáp, tỉnh Quảng Bình. Xác định mục tiêu du học sau khi tốt nghiệp nên ngay từ những năm học cấp 3, Thảo đã luôn ưu tiên trau dồi khả năng tiếng Anh của mình. </p>
-                    <p class="is-active">Đoàn Cao Hương Thảo hiện đang là học sinh lớp 12 tại trường THPT Chuyên Võ Nguyên Giáp, tỉnh Quảng Bình. Xác định mục tiêu du học sau khi tốt nghiệp nên ngay từ những năm học cấp 3, Thảo đã luôn ưu tiên trau dồi khả năng tiếng Anh của mình. </p>
-                  </div>
-                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-1.jpg')}}" alt="" srcset=""/></a>
-                    <h3>Đoàn cao hương thảo</h3>
-                    <p>THPT Chuyên Võ Nguyên Giáp IELTS 8.5</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="students__item">
-                  <div class="students__item-feel">
-                    <p class="is-overflow">Mục tiêu của em khi học IELTS tại Le Plateau là 7.5. Chỉ sau một khóa học tiếng Anh và kiến thức xác hội của em ngày càng tốt hơn, giúp em đạt 8.0 IELTS. Em đánh giá Le Plateau là cơ sở rất tốt để các bạn học sinh có mục tiêu du học như em theo đuổi.</p>
-                    <p class="is-active">Mục tiêu của em khi học IELTS tại Le Plateau là 7.5. Chỉ sau một khóa học tiếng Anh và kiến thức xác hội của em ngày càng tốt hơn, giúp em đạt 8.0 IELTS. Em đánh giá Le Plateau là cơ sở rất tốt để các bạn học sinh có mục tiêu du học như em theo đuổi.</p>
-                  </div>
-                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-3.jpg')}}" alt="" srcset=""/></a>
-                    <h3>Lê ngọc minh</h3>
-                    <p>THPT Việt Đức - IELTS 8.0</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="students__item">
-                  <div class="students__item-feel">
-                    <p class="is-overflow">Trong quá trình học tập tại Le Plateau, Lan Chi nhận thấy khóa học tại Le Plateau vô cùng bổ ích với các giờ học cùng các thầy cô giáo bản địa có kinh nghiệm và trình độ giảng dạy nhiều năm tại Le Plateau</p>
-                    <p class="is-active">Trong quá trình học tập tại Le Plateau, Lan Chi nhận thấy khóa học tại Le Plateau vô cùng bổ ích với các giờ học cùng các thầy cô giáo bản địa có kinh nghiệm và trình độ giảng dạy nhiều năm tại Le Plateau</p>
-                  </div>
-                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-2.jpg')}}" alt="" srcset=""/></a>
-                    <h3>Đoàn cao hương thảo</h3>
-                    <p>THPT Chuyên Võ Nguyên Giáp IELTS 8.5</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="students__item">
-                  <div class="students__item-feel">
-                    <p class="is-overflow">Đoàn Cao Hương Thảo hiện đang là học sinh lớp 12 tại trường THPT Chuyên Võ Nguyên Giáp, tỉnh Quảng Bình. Xác định mục tiêu du học sau khi tốt nghiệp nên ngay từ những năm học cấp 3, Thảo đã luôn ưu tiên trau dồi khả năng tiếng Anh của mình. </p>
-                    <p class="is-active">Đoàn Cao Hương Thảo hiện đang là học sinh lớp 12 tại trường THPT Chuyên Võ Nguyên Giáp, tỉnh Quảng Bình. Xác định mục tiêu du học sau khi tốt nghiệp nên ngay từ những năm học cấp 3, Thảo đã luôn ưu tiên trau dồi khả năng tiếng Anh của mình. </p>
-                  </div>
-                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-1.jpg')}}" alt="" srcset=""/></a>
-                    <h3>Đoàn cao hương thảo</h3>
-                    <p>THPT Chuyên Võ Nguyên Giáp IELTS 8.5</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="students__item">
-                  <div class="students__item-feel">
-                    <p class="is-overflow">Mục tiêu của em khi học IELTS tại Le Plateau là 7.5. Chỉ sau một khóa học tiếng Anh và kiến thức xác hội của em ngày càng tốt hơn, giúp em đạt 8.0 IELTS. Em đánh giá Le Plateau là cơ sở rất tốt để các bạn học sinh có mục tiêu du học như em theo đuổi.</p>
-                    <p class="is-active">Mục tiêu của em khi học IELTS tại Le Plateau là 7.5. Chỉ sau một khóa học tiếng Anh và kiến thức xác hội của em ngày càng tốt hơn, giúp em đạt 8.0 IELTS. Em đánh giá Le Plateau là cơ sở rất tốt để các bạn học sinh có mục tiêu du học như em theo đuổi.</p>
-                  </div>
-                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-3.jpg')}}" alt="" srcset=""/></a>
-                    <h3>Lê ngọc minh</h3>
-                    <p>THPT Việt Đức - IELTS 8.0</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="students__item">
-                  <div class="students__item-feel">
-                    <p class="is-overflow">Trong quá trình học tập tại Le Plateau, Lan Chi nhận thấy khóa học tại Le Plateau vô cùng bổ ích với các giờ học cùng các thầy cô giáo bản địa có kinh nghiệm và trình độ giảng dạy nhiều năm tại Le Plateau</p>
-                    <p class="is-active">Trong quá trình học tập tại Le Plateau, Lan Chi nhận thấy khóa học tại Le Plateau vô cùng bổ ích với các giờ học cùng các thầy cô giáo bản địa có kinh nghiệm và trình độ giảng dạy nhiều năm tại Le Plateau</p>
-                  </div>
-                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-2.jpg')}}" alt="" srcset=""/></a>
-                    <h3>Đoàn cao hương thảo</h3>
-                    <p>THPT Chuyên Võ Nguyên Giáp IELTS 8.5</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="students-pagination"></div>
-      </div>
-      <div class="pt-4"></div>
-    </div>
+{{--    <div class="section__students">--}}
+{{--      <div class="container">--}}
+{{--        <div class="row justify-content-lg-center">--}}
+{{--          <div class="col-lg-8">--}}
+{{--            <div class="pt-3"></div>--}}
+{{--            <div class="pt-3"></div>--}}
+{{--            <div class="section__title">--}}
+{{--              <h3>Cảm nhận học viên</h3>--}}
+{{--            </div>--}}
+{{--          </div>--}}
+{{--        </div>--}}
+{{--        <div class="swiper-students">--}}
+{{--          <div class="swiper-container">--}}
+{{--            <div class="swiper-wrapper">--}}
+{{--              <div class="swiper-slide">--}}
+{{--                <div class="students__item">--}}
+{{--                  <div class="students__item-feel">--}}
+{{--                    <p class="is-overflow">Đoàn Cao Hương Thảo hiện đang là học sinh lớp 12 tại trường THPT Chuyên Võ Nguyên Giáp, tỉnh Quảng Bình. Xác định mục tiêu du học sau khi tốt nghiệp nên ngay từ những năm học cấp 3, Thảo đã luôn ưu tiên trau dồi khả năng tiếng Anh của mình. </p>--}}
+{{--                    <p class="is-active">Đoàn Cao Hương Thảo hiện đang là học sinh lớp 12 tại trường THPT Chuyên Võ Nguyên Giáp, tỉnh Quảng Bình. Xác định mục tiêu du học sau khi tốt nghiệp nên ngay từ những năm học cấp 3, Thảo đã luôn ưu tiên trau dồi khả năng tiếng Anh của mình. </p>--}}
+{{--                  </div>--}}
+{{--                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-1.jpg')}}" alt="" srcset=""/></a>--}}
+{{--                    <h3>Đoàn cao hương thảo</h3>--}}
+{{--                    <p>THPT Chuyên Võ Nguyên Giáp IELTS 8.5</p>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--              <div class="swiper-slide">--}}
+{{--                <div class="students__item">--}}
+{{--                  <div class="students__item-feel">--}}
+{{--                    <p class="is-overflow">Mục tiêu của em khi học IELTS tại Le Plateau là 7.5. Chỉ sau một khóa học tiếng Anh và kiến thức xác hội của em ngày càng tốt hơn, giúp em đạt 8.0 IELTS. Em đánh giá Le Plateau là cơ sở rất tốt để các bạn học sinh có mục tiêu du học như em theo đuổi.</p>--}}
+{{--                    <p class="is-active">Mục tiêu của em khi học IELTS tại Le Plateau là 7.5. Chỉ sau một khóa học tiếng Anh và kiến thức xác hội của em ngày càng tốt hơn, giúp em đạt 8.0 IELTS. Em đánh giá Le Plateau là cơ sở rất tốt để các bạn học sinh có mục tiêu du học như em theo đuổi.</p>--}}
+{{--                  </div>--}}
+{{--                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-3.jpg')}}" alt="" srcset=""/></a>--}}
+{{--                    <h3>Lê ngọc minh</h3>--}}
+{{--                    <p>THPT Việt Đức - IELTS 8.0</p>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--              <div class="swiper-slide">--}}
+{{--                <div class="students__item">--}}
+{{--                  <div class="students__item-feel">--}}
+{{--                    <p class="is-overflow">Trong quá trình học tập tại Le Plateau, Lan Chi nhận thấy khóa học tại Le Plateau vô cùng bổ ích với các giờ học cùng các thầy cô giáo bản địa có kinh nghiệm và trình độ giảng dạy nhiều năm tại Le Plateau</p>--}}
+{{--                    <p class="is-active">Trong quá trình học tập tại Le Plateau, Lan Chi nhận thấy khóa học tại Le Plateau vô cùng bổ ích với các giờ học cùng các thầy cô giáo bản địa có kinh nghiệm và trình độ giảng dạy nhiều năm tại Le Plateau</p>--}}
+{{--                  </div>--}}
+{{--                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-2.jpg')}}" alt="" srcset=""/></a>--}}
+{{--                    <h3>Đoàn cao hương thảo</h3>--}}
+{{--                    <p>THPT Chuyên Võ Nguyên Giáp IELTS 8.5</p>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--              <div class="swiper-slide">--}}
+{{--                <div class="students__item">--}}
+{{--                  <div class="students__item-feel">--}}
+{{--                    <p class="is-overflow">Đoàn Cao Hương Thảo hiện đang là học sinh lớp 12 tại trường THPT Chuyên Võ Nguyên Giáp, tỉnh Quảng Bình. Xác định mục tiêu du học sau khi tốt nghiệp nên ngay từ những năm học cấp 3, Thảo đã luôn ưu tiên trau dồi khả năng tiếng Anh của mình. </p>--}}
+{{--                    <p class="is-active">Đoàn Cao Hương Thảo hiện đang là học sinh lớp 12 tại trường THPT Chuyên Võ Nguyên Giáp, tỉnh Quảng Bình. Xác định mục tiêu du học sau khi tốt nghiệp nên ngay từ những năm học cấp 3, Thảo đã luôn ưu tiên trau dồi khả năng tiếng Anh của mình. </p>--}}
+{{--                  </div>--}}
+{{--                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-1.jpg')}}" alt="" srcset=""/></a>--}}
+{{--                    <h3>Đoàn cao hương thảo</h3>--}}
+{{--                    <p>THPT Chuyên Võ Nguyên Giáp IELTS 8.5</p>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--              <div class="swiper-slide">--}}
+{{--                <div class="students__item">--}}
+{{--                  <div class="students__item-feel">--}}
+{{--                    <p class="is-overflow">Mục tiêu của em khi học IELTS tại Le Plateau là 7.5. Chỉ sau một khóa học tiếng Anh và kiến thức xác hội của em ngày càng tốt hơn, giúp em đạt 8.0 IELTS. Em đánh giá Le Plateau là cơ sở rất tốt để các bạn học sinh có mục tiêu du học như em theo đuổi.</p>--}}
+{{--                    <p class="is-active">Mục tiêu của em khi học IELTS tại Le Plateau là 7.5. Chỉ sau một khóa học tiếng Anh và kiến thức xác hội của em ngày càng tốt hơn, giúp em đạt 8.0 IELTS. Em đánh giá Le Plateau là cơ sở rất tốt để các bạn học sinh có mục tiêu du học như em theo đuổi.</p>--}}
+{{--                  </div>--}}
+{{--                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-3.jpg')}}" alt="" srcset=""/></a>--}}
+{{--                    <h3>Lê ngọc minh</h3>--}}
+{{--                    <p>THPT Việt Đức - IELTS 8.0</p>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--              <div class="swiper-slide">--}}
+{{--                <div class="students__item">--}}
+{{--                  <div class="students__item-feel">--}}
+{{--                    <p class="is-overflow">Trong quá trình học tập tại Le Plateau, Lan Chi nhận thấy khóa học tại Le Plateau vô cùng bổ ích với các giờ học cùng các thầy cô giáo bản địa có kinh nghiệm và trình độ giảng dạy nhiều năm tại Le Plateau</p>--}}
+{{--                    <p class="is-active">Trong quá trình học tập tại Le Plateau, Lan Chi nhận thấy khóa học tại Le Plateau vô cùng bổ ích với các giờ học cùng các thầy cô giáo bản địa có kinh nghiệm và trình độ giảng dạy nhiều năm tại Le Plateau</p>--}}
+{{--                  </div>--}}
+{{--                  <div class="students__item-content"><a class="students__item-avatar" href="student-detail.html"><img src="{{asset('/static/frontend/img/students/student-2.jpg')}}" alt="" srcset=""/></a>--}}
+{{--                    <h3>Đoàn cao hương thảo</h3>--}}
+{{--                    <p>THPT Chuyên Võ Nguyên Giáp IELTS 8.5</p>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
+{{--              </div>--}}
+{{--            </div>--}}
+{{--          </div>--}}
+{{--        </div>--}}
+{{--        <div class="students-pagination"></div>--}}
+{{--      </div>--}}
+{{--      <div class="pt-4"></div>--}}
+{{--    </div>--}}
   </div>
   <!-- popup subscribe for student -->
   <!-- @include('frontend.includes.popup.subscribe') -->

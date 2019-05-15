@@ -53,7 +53,7 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Name</th>
+                                <th>Tên</th>
                                 <th>Số điện thoại</th>
                                 <th>Địa chỉ</th>
                                 <th>Ngày tạo</th>
