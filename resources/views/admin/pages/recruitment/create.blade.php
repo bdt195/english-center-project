@@ -53,6 +53,17 @@
                             @csrf
                             <div class="box-body">
                                 <div class="form-group">
+                                    <label for="facility" class="col-sm-3 control-label">Cơ sở</label>
+
+                                    <div class="col-sm-8">
+                                        <select class="form-control" id="facility" name="facility">
+                                            @foreach($facilities as $facility)
+                                                <option value="{{ $facility->id }}">{{ $facility->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
                                     <label for="title" class="col-sm-3 control-label">Tiêu đề</label>
 
                                     <div class="col-sm-8">

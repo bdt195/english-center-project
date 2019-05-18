@@ -27,7 +27,7 @@
         <div class="col-md-9">
           @if (!count($courses))
             <div class="message-container">
-              <p class="alert-danger">Không tìm thấy khóa học phù hợp.</p>
+              <p class="alert-danger">Không tìm thấy khóa học phù hợp, <a href="/course">bấm vào đây</a> để quay lại.</p>
             </div>
           @endif
           <div class="row">
@@ -72,7 +72,49 @@
                 </ul>
               </div>
             </div>
-            <button type="submit">Lọc khóa học</button>
+            <div class="filter">
+              <div class="filter-list filter-list-checkbox">
+                <h3 class="title">Lọc theo thời gian</h3>
+                <ul class="list-unstyled px-2">
+                    <li>
+                      <label for="start-date">Bắt đầu từ ngày</label><br/>
+                      <input type="date" id="start-date" class="mr-2" name="start-date[]">
+                    </li>
+                    <li>
+                      <label for="end-date">Đến ngày</label><br/>
+                      <input type="date" id="end-date" class="mr-2" name="start-date[]">
+                    </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter">
+              <div class="filter-list filter-list-checkbox">
+                <h3 class="title">Lọc theo thời gian</h3>
+                <ul class="list-unstyled px-2">
+                  <li>
+                    <label for="start-date">Kết thúc từ ngày</label><br/>
+                    <input type="date" id="start-date" class="mr-2" name="end-date[]">
+                  </li>
+                  <li>
+                    <label for="end-date">Đến ngày</label><br/>
+                    <input type="date" id="end-date" class="mr-2" name="end-date[]">
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter">
+            <div class="filter">
+              <div class="filter-list filter-list-checkbox">
+                <h3 class="title">Lọc theo trạng thái</h3>
+                <ul class="list-unstyled px-2">
+                  <li>
+                    <input type="radio" name="status" value="1"> Mở<br>
+                    <input type="radio" name="status" value="0"> Đóng<br>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn btn-primary mb-3" type="submit">Lọc khóa học</button>
           </form>
         </div>
       </div>

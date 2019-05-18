@@ -1,4 +1,7 @@
 @extends('frontend/layouts/default')
+<?php
+
+?>
 @section('content')
 <div class="main-content-container">
   <div class="main__content">
@@ -27,15 +30,19 @@
               @endif
               <h2 class="title">{{ $course->name }}</h2>
               @if(!$isEnrolled && !$isDuplicate && Auth::check())
-              <button id="enroll-btn">Ghi Danh</button>
+              <button id="enroll-btn" class="btn btn-primary mb-3">Ghi Danh</button>
               @elseif($isEnrolled)
               <p class="text-danger">Bạn đã đăng ký khóa học này.</p>
               @elseif($isDuplicate)
               <p class="text-danger">Khóa học này trùng lịch với một trong số khoa học bạn đã đăng ký .</p>
               @endif
-              <ul class="menu-icon">
-                <li><i class="zmdi zmdi-folder"></i><span>Các khóa học</span></li>
-                <li><i class="zmdi zmdi-tag"></i><span>Các khóa học, tháng 11/2018</span></li>
+              <ul class="">
+                <li><span>Ngôn ngữ: {{ $course->category->name }}</span></li>
+                <li><span>Ngày bắt đầu: {{ $course->start_date }}</span></li>
+                <li><span>Ngày kết thúc: {{ $course->end_date }}</span></li>
+                <li><span>Cơ sở: {{ $course->facility->name }}</span></li>
+                <li><span>Giảng viên: @foreach($course->teachers as $teacher) {{ $teacher->first_name . ' ' . $teacher->last_name . ',' }} @endforeach</span></li>
+                <li><span>Lịch học: @foreach($course->schedule as $schedule ) {{ $schedule . ',' }} @endforeach</span></li>
               </ul>
             </div>
             <div class="content-main">
@@ -44,9 +51,6 @@
             <form id="form-enroll" action="/course/{{ $course->id }}" method="POST" hidden>
               @csrf
             </form>
-          </div>
-          <div class="col-md-4 col-lg-3">
-            <div class="nav-course-list"><a href="#">Khóa học đào tạo tiếng anh sơ cấp</a><a href="#">Khóa học ĐÀO TẠO TIẾNG ANH PRE-IELTS</a><a href="#">Khóa học LUYỆN THI TIẾNG ANH IELTS</a><a href="#">Khóa học TÀI CHÍNH</a></div>
           </div>
         </div>
       </div>

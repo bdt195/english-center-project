@@ -1,7 +1,7 @@
 @extends('frontend/layouts/default')
 @section('content')
 <?php $user = Auth::user() ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="/static/frontend/js/jquery-3.4.1.min.js"></script>
 <script>
   $(document).ready(function(){
     function readURL(input) {
@@ -45,9 +45,9 @@
         <div class="col-9">
           <div class="tab-content" id="v-pills-tabContent">
             @if (!Session::has('flag') && Session::has('success'))
-              <div class="message-container col-12 alert-success">
+              <div class="message-container col-12 alert-success m-0 mb-3 py-2 px-3 rounded">
                 @foreach(Session::get('success') as $item)
-                  <p>{{ $item }}</p>
+                  <p class="m-0">{{ $item }}</p>
                 @endforeach
               </div>
             @endif

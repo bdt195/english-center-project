@@ -12,6 +12,10 @@
           <i class="zmdi zmdi-time-restore mr-1"></i>
           <span class="font-italic">{{ $post->created_at }}</span>
         </div>
+        <div class="time-ago">
+          <i class="zmdi zmdi-time-restore mr-1"></i>
+          <span class="font-italic">{{ $post->author }}</span>
+        </div>
         <div class="job-description py-4">
           {!! $post->content !!}
         </div>

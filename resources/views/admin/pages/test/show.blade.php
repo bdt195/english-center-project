@@ -41,6 +41,15 @@
 
     <!-- Main content -->
     <section class="content">
+        @if (Session::has('success'))
+            <div class="message-container">
+                @foreach(Session::get('success') as $item)
+                    <div class="alert alert-success alert-dismissible">
+                        <p>{{ $item }}</p>
+                    </div>
+                @endforeach
+            </div>
+        @endif
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
@@ -53,6 +62,7 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
+                                <th>Trạng thái</th>
                                 <th>Tên</th>
                                 <th>Ngày sinh</th>
                                 <th>Email</th>
@@ -68,6 +78,9 @@
                                 @foreach ($studentCollection as $student)
                                 <tr>
                                     <td>{{ $student->id }}</td>
+                                    {{ $status = DB::table('student_test')->where('student_id', $student->id)->where('test_id', 1)->first()->status }}
+                                    @if($status == 0) <td><span class="label label-danger">Chưa đóng phí</span></td> @endif
+                                    @if($status == 1) <td><span class="label label-success">Đã đóng phí</span></td> @endif
                                     <td>{{ $student->first_name . ' ' . $student->last_name }}</td>
                                     <td>{{ $student->date_of_birth }}</td>
                                     <td>{{ $student->email }}</td>
@@ -75,8 +88,9 @@
                                     <td>{{ $student->address }}</td>
                                     <td>{{ $student->created_at }}</td>
                                     <td>{{ $student->updated_at }}</td>
-                                    <td><a href="/admin/student/{{ $student->id }}/edit"><span class="label label-success">Sửa</span></a></td>
-                                    <td><a href=""><span class="label label-danger">Xóa</span></a></td>
+                                    @if($status == 0) <td><a href="{{ URL::current() . "?student=$student->id&action=edit&value=1" }}"><span class="label label-success">Nộp phí</span></a></td>@endif
+                                    @if($status == 1) <td><a href="{{ URL::current() . "?student=$student->id&action=edit&value=0" }}"><span class="label label-success">Hủy nộp phí</span></a></td>@endif
+                                    <td><a href="{{ URL::current() . "?student=$student->id&action=delete" }}"><span class="label label-danger">Xóa</span></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

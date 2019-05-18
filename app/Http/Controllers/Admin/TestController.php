@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Facility;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Test;
 use App\CourseCategory;
@@ -29,6 +31,28 @@ class TestController extends Controller
     public function show($id)
     {
         $studentCollection = Test::findOrFail($id)->students;
+
+        if(Input::has('student') && Input::has('action')){
+            $studentId = Input::get('student');
+            $action = Input::get('action');
+            $value = Input::get('value');
+
+            if($action == 'edit'){
+                if($value == 1){
+                    DB::table('student_test')->where('test_id', $id)->where('student_id', $studentId)->update(['status' => 1]);
+                }
+                elseif($value == 0){
+                    DB::table('student_test')->where('test_id', $id)->where('student_id', $studentId)->update(['status' => 0]);
+                }
+            }
+            elseif($action == 'delete'){
+                DB::table('student_test')->where('test_id', $id)->where('student_id', $studentId)->delete();
+            }
+
+
+            return redirect()->back()->with('success', ['Đã cập nhật thành công.']);
+        }
+
         return view('admin.pages.test.show', ['studentCollection' => $studentCollection]);
     }
 

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Facility;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Recruitment;
+use App\CV;
+use Illuminate\Support\Facades\Input;
 
 class RecruitmentController extends Controller
 {
@@ -26,7 +29,8 @@ class RecruitmentController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.recruitment.create');
+        $facilities = Facility::all();
+        return view('admin.pages.recruitment.create', ['facilities' => $facilities]);
     }
 
     /**
@@ -40,12 +44,13 @@ class RecruitmentController extends Controller
         $title = $request->input('title');
         $content = $request->input('content');
         $expireDate = $request->input('expire-date');
+        $facilityId = $request->input('facility');
 
         $recruitment = new Recruitment();
         $recruitment->title = $title;
         $recruitment->content = $content;
         $recruitment->expire_date = $expireDate;
-        $recruitment->facility_id = 1;
+        $recruitment->facility_id = $facilityId;
         $recruitment->save();
 
         return redirect()->action('Admin\RecruitmentController@index');
@@ -58,7 +63,14 @@ class RecruitmentController extends Controller
     public function show($id)
     {
         $recruitment = Recruitment::findOrFail($id);
-
+        if(Input::has('action') && Input::has('cv')){
+            $cvId = Input::get('cv');
+            $action = Input::get('action');
+            $cv = CV::findOrFail($cvId);
+            $cv->status = $action == 0 ? 0 : 2;
+            $cv->save();
+            return redirect()->back()->with('success', ['Đã cập nhật thành công.']);
+        }
         return view('admin.pages.recruitment.show',['recruitment' => $recruitment]);
     }
 

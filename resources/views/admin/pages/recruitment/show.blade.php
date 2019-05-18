@@ -41,6 +41,15 @@
 
     <!-- Main content -->
     <section class="content">
+        @if (Session::has('success'))
+            <div class="message-container">
+                @foreach(Session::get('success') as $item)
+                <div class="alert alert-success alert-dismissible">
+                    <p>{{ $item }}</p>
+                </div>
+                @endforeach
+            </div>
+        @endif
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
@@ -53,20 +62,26 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>File Name</th>
-                                <th>Mime Type</th>
-                                <th>Ngày tạo</th>
-                                <th>Xóa</th>
+                                <th>Trạng thái</th>
+                                <th>Tên file</th>
+                                <th>Kiểu file</th>
+                                <th>Ngày gửi</th>
+                                <th>Chấp nhận</th>
+                                <th>Từ chối</th>
                             </tr>
                             </thead>
                             <tbody>
                                 @foreach ($recruitment->cv as $cv)
                                 <tr>
                                     <td>{{ $cv->id }}</td>
+                                    @if($cv->status == 0) <td><span class="label label-danger">Đã từ chối</span></td> @endif
+                                    @if($cv->status == 1) <td><span class="label label-warning">Đang chờ</span></td> @endif
+                                    @if($cv->status == 2) <td><span class="label label-success">Đã chấp nhận</span></td> @endif
                                     <td><a href="/{{ $cv->file_path }}">{{ $cv->file_name }}</a></td>
                                     <td>{{ $cv->file_type }}</td>
                                     <td>{{ $cv->created_at }}</td>
-                                    <td><a href=""><span class="label label-danger">Xóa</span></a></td>
+                                    <td><a href="{{ URL::current() . "?cv=$cv->id&action=2" }}"><span class="label label-success">Chấp nhận</span></a></td>
+                                    <td><a href="{{ URL::current() . "?cv=$cv->id&action=0" }}"><span class="label label-danger">Từ chối</span></a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

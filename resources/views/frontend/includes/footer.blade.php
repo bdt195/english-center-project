@@ -29,8 +29,8 @@
   </div>
   <hr class="light">
   <div class="text-copyright">
-    <p><span>&copy; CÔNG TY TNHH MTV CUNG ỨNG NHÂN LỰC LE PLATEAU </span>- Giấy chứng nhận doanh nghiệp số: 0313548147, Ngày cấp giấy phép: 24/11/2015,</p>
-    <p>Trụ Sở Chính Tại Quốc lộ 1A, thôn Đông Nam, xã Đại Lãnh, huyện Vạn Ninh, tỉnh Khánh Hòa, Điện thoại: 094 191 6000</p>
+    <p><span>&copy; CÔNG TY TNHH MTV Công Nghệ LA PLATEAU </span></p>
+    <p>Trường Đại Học Công Nghệ - Đại Học Quốc Gia Hà Nội</p>
   </div>
 </div>
 <div class="back-to-top" id="back-to-top">

@@ -50,6 +50,6 @@ class Student extends Authenticatable
     }
 
     public function tests(){
-        return $this->belongsToMany('App\Test', 'student_test', 'student_id', 'test_id');
+        return $this->belongsToMany('App\Test', 'student_test', 'student_id', 'test_id')->withPivot('status');;
     }
 }
